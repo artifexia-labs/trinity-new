@@ -1,0 +1,125 @@
+/* --- Стили для страницы цен --- */
+.pricing-page {
+    padding: 80px 0;
+}
+
+/* --- Верхний блок --- */
+.pricing-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+.pricing-intro__title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.pricing-intro__subtitle {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+.pricing-intro p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #6c757d;
+}
+
+
+/* --- Сетка: Текст + Цены --- */
+.pricing-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+@media (max-width: 992px) {
+    .pricing-content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Левая колонка с текстом --- */
+.pricing-content__text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.pricing-content__text p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* --- Правая колонка с ценами --- */
+.pricing-content__list {
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+.pricing-content__list h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.pricing-date {
+    font-size: 14px;
+    font-weight: 400;
+    color: #6c757d;
+}
+.pricing-note {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+.price-category {
+    margin-bottom: 25px;
+}
+.price-category h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 16px;
+}
+.price-item span:first-child {
+    font-weight: 600;
+}
+.price-item span:last-child {
+    font-weight: 700;
+    white-space: nowrap;
+    padding-left: 15px;
+}
+.price-item--note span {
+    font-size: 14px;
+    font-weight: 400 !important;
+    color: #6c757d;
+}
+
+/* --- Нижний блок с текстом --- */
+.pricing-outro {
+    background-color: var(--white-color);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+.pricing-outro h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.pricing-outro p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+.pricing-outro p:last-child {
+    margin-bottom: 0;
+}

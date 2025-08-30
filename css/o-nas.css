@@ -1,0 +1,214 @@
+/* --- Стили для страницы "O nás" --- */
+.about-us-page {
+    background-color: var(--white-color);
+}
+
+/* --- Вступительный блок --- */
+.about-hero {
+    background-color: var(--dark-color); /* Фоновый цвет на случай, если картинка не загрузится */
+    color: var(--white-color);
+    padding: 100px 0; /* Увеличил отступы для лучшего вида */
+    text-align: center;
+    /* Обновленная фоновая картинка и градиент */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/evropska.jpg'); /* Усилил градиент для читаемости текста */
+    background-size: cover; /* Картинка будет покрывать всю область */
+    background-position: center center; /* Центрируем картинку */
+    background-repeat: no-repeat;
+    display: flex; /* Для выравнивания текста по центру */
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center; /* Выравнивание по горизонтали */
+    min-height: 400px; /* Минимальная высота блока */
+}
+.about-hero__title {
+    font-size: 48px; /* Чуть увеличил размер для акцента */
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Тень для лучшей читаемости */
+}
+.about-hero__subtitle {
+    font-size: 20px; /* Чуть увеличил размер */
+    color: #e0e0e0; /* Более светлый цвет для контраста */
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Тень для лучшей читаемости */
+}
+
+/* Мобильная адаптация для hero-секции */
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 80px 0;
+        min-height: 300px;
+    }
+    .about-hero__title {
+        font-size: 36px;
+    }
+    .about-hero__subtitle {
+        font-size: 18px;
+    }
+}
+/* --- Секция с таймлайном --- */
+.timeline-section {
+    padding: 80px 24px;
+}
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+/* Центральная вертикальная линия */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #e9ecef;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+}
+
+/* Расположение элементов */
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+/* Контент и изображение внутри item */
+.timeline-item .timeline-content,
+.timeline-item .timeline-image-container {
+    padding: 20px 30px;
+    background-color: var(--light-gray-color);
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+.timeline-item .timeline-image-container {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+/* Стрелки-указатели */
+.timeline-item .timeline-content::after {
+    content: " ";
+    position: absolute;
+    top: 32px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+.timeline-item:nth-child(odd) .timeline-content::after {
+    right: -10px;
+    border-left: 10px solid var(--light-gray-color);
+}
+.timeline-item:nth-child(even) .timeline-content::after {
+    left: -10px;
+    border-right:10px solid var(--light-gray-color);
+}
+
+
+/* Кружочек с иконкой на линии */
+.timeline-icon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: -25px;
+    background-color: var(--white-color);
+    border: 4px solid var(--primary-color);
+    top: 32px;
+    border-radius: 50%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--primary-color);
+}
+.timeline-item:nth-child(even) .timeline-icon {
+    left: -25px;
+}
+
+/* Стили текста и изображения */
+.timeline-content h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.timeline-item:nth-child(odd) .timeline-content h2,
+.timeline-item:nth-child(odd) .timeline-content p {
+    text-align: right;
+}
+
+.timeline-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #6c757d;
+    margin-bottom: 0;
+    text-align: left;
+}
+.timeline-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 992px) {
+    .timeline::after {
+        left: 25px;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 15px;
+        left: 0 !important;
+    }
+    .timeline-icon {
+        left: 0;
+    }
+    .timeline-item:nth-child(odd) .timeline-content h2,
+    .timeline-item:nth-child(odd) .timeline-content p,
+    .timeline-item:nth-child(even) .timeline-content h2,
+    .timeline-item:nth-child(even) .timeline-content p {
+        text-align: left;
+    }
+    .timeline-item .timeline-content::after {
+        left: -10px;
+        border-right: 10px solid var(--light-gray-color);
+        border-left: none;
+    }
+    
+    /* На мобильных фото всегда над текстом */
+    .timeline-image-container {
+        margin-bottom: 15px;
+        padding: 0;
+    }
+    .timeline-item .timeline-content {
+        margin-top: 15px;
+    }
+
+    /* Меняем порядок блоков для мобильных */
+    .timeline-item:nth-child(odd) .timeline-content, 
+    .timeline-item:nth-child(odd) .timeline-image-container,
+    .timeline-item:nth-child(even) .timeline-content, 
+    .timeline-item:nth-child(even) .timeline-image-container {
+        display: block;
+        position: static;
+        width: 100%;
+    }
+    
+    .timeline-item > .timeline-image-container {
+        order: -1; /* Ставим изображение первым */
+    }
+}

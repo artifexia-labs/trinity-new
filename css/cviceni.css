@@ -1,0 +1,309 @@
+/* --- Стили для страницы "Cvičení" --- */
+.classes-page {
+    padding-bottom: 80px;
+}
+
+/* --- Вступительный блок --- */
+.classes-hero {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding: 60px 0;
+    text-align: center;
+}
+.classes-hero__title {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+.classes-hero__subtitle {
+    font-size: 18px;
+    color: #aab1b7;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- Стили для секций --- */
+.classes-section {
+    padding: 80px 0;
+}
+.classes-section--dark-bg {
+    background-color: var(--white-color);
+}
+
+/* --- Сетка с видами тренировок --- */
+.class-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.class-item {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    align-items: center;
+    background-color: var(--white-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+.class-item:hover {
+    transform: translateY(-5px);
+}
+.class-item:nth-child(even) {
+    grid-template-columns: 1fr 300px;
+}
+.class-item:nth-child(even) .class-item__image {
+    order: 2;
+}
+.class-item__image {
+    width: 100%;
+    height: 100%;
+    display: flex; /* Для центрирования иконки */
+    align-items: center; /* Для центрирования иконки */
+    justify-content: center; /* Для центрирования иконки */
+    background-color: #e9ecef; /* Фон для иконок */
+}
+.class-item__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.class-item__image--icon i {
+    font-size: 100px; /* Размер иконки */
+    color: var(--primary-color); /* Цвет иконки */
+}
+.class-item__content {
+    padding: 30px;
+}
+.class-item__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.class-item__text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #6c757d;
+}
+@media (max-width: 992px) {
+    .class-item, .class-item:nth-child(even) {
+        grid-template-columns: 1fr;
+    }
+    .class-item__image {
+        height: 200px; /* Фиксированная высота для изображений и иконок на мобильных */
+    }
+}
+
+
+/* --- СЕКЦИЯ С КОМАНДОЙ --- */
+
+/* Сетка для главных инструкторов */
+.team-featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+.featured-card {
+    background-color: var(--white-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 25px;
+    align-items: center;
+    padding: 25px;
+    border: 2px solid #e9ecef;
+    /* Стили для анимации */
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+.featured-card.is-visible {
+    transform: scale(1);
+    opacity: 1;
+}
+.featured-card__image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.featured-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+.featured-card__name {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.featured-card__role {
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.featured-card__text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #6c757d;
+}
+@media (max-width: 992px) {
+    .team-featured {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 576px) {
+    .featured-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .featured-card__image {
+        margin: 0 auto;
+    }
+}
+
+/* Слайдер для остальной команды */
+.team-secondary-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #6c757d;
+}
+.team-section {
+    position: relative;
+    padding: 0 50px;
+}
+.team-slider .swiper-slide {
+    height: auto;
+}
+.team-card {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.team-card__image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    background-color: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #adb5bd;
+    overflow: hidden;
+}
+.team-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.team-card__name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.team-card__role {
+    font-size: 14px;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+    min-height: 36px;
+}
+.team-card__text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #6c757d;
+    flex-grow: 1;
+}
+.swiper-button-next, .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    color: var(--primary-color) !important;
+    transition: all 0.3s ease;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color) !important;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 20px !important;
+    font-weight: bold !important;
+}
+.swiper-button-prev { left: 0; }
+.swiper-button-next { right: 0; }
+@media (max-width: 768px) {
+    .team-section {
+        padding: 0;
+    }
+    .swiper-button-next, .swiper-button-prev {
+        display: none;
+    }
+}
+
+
+/* --- Секция доп. услуг --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.service-item {
+    background-color: var(--white-color);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+.service-item__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.service-item p, .service-item li {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+.service-item ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- CTA блок --- */
+.cta-section {
+    padding: 60px 0;
+    text-align: center;
+}
+.cta-section__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.cta-section p {
+    font-size: 18px;
+    color: #6c757d;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}

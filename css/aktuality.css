@@ -1,0 +1,36 @@
+/* --- Стили для страницы "Aktuality" --- */
+
+.placeholder-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 24px;
+    background-color: var(--white-color);
+    flex-grow: 1; /* Эта строка заставит секцию занять всё доступное место, прижав футер вниз на этой конкретной странице. */
+}
+
+.placeholder-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.placeholder-icon {
+    font-size: 80px;
+    color: var(--primary-color);
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+.placeholder-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.placeholder-text {
+    font-size: 18px;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
