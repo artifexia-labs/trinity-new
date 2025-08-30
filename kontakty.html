@@ -1,8 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
 <head>
-    </head>
-<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakty - Trinity Club Redesign</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/kontakty.css">
+</head>
+<body class="contact-page">
+
     <header class="header">
         <nav class="navbar">
             <a href="index.html" class="navbar__logo"><img src="img/logo.png" alt="Trinity Club Logo"></a>
@@ -10,7 +22,7 @@
                 <li><a href="cviceni.html">Cvičení</a></li>
                 <li><a href="cenik.html">Ceník</a></li>
                 <li><a href="sluzby.html">Služby</a></li>
-                <li><a href="kavarna.html" class="active">Kavárna</a></li>
+                <li><a href="kavarna.html">Kavárna</a></li>
                 <li><a href="aktuality.html">Aktuality</a></li>
                 <li><a href="o-nas.html">O nás</a></li>
                 <li><a href="kontakty.html" class="active">Kontakty</a></li>
@@ -19,14 +31,105 @@
             <button class="navbar__menu-toggle" id="menu-toggle"><i class='bx bx-menu'></i></button>
         </nav>
     </header>
+
     <main>
-        <div class="container" style="padding: 80px 24px; text-align: center;">
-            <h1 class="section-title">Kavárna</h1>
-            <p class="section-subtitle">Obsah této stránky se připravuje...</p>
-        </div>
+        <section class="contact-hero">
+            <div class="container">
+                <h1 class="contact-hero__title">Udělejte první krok</h1>
+                <p class="contact-hero__subtitle">Jsme tu pro vás. Zavolejte, napište, nebo se zastavte osobně v Trinity Clubu Cheb.</p>
+            </div>
+        </section>
+
+        <section class="contact-info-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-details">
+                        <div class="contact-card">
+                            <h3 class="contact-card__title">Hlavní Kontakt</h3>
+                            <ul class="contact-list">
+                                <li><i class='bx bxs-map'></i><span>Evropská 41, 35002 Cheb</span></li>
+                                <li><i class='bx bxs-phone-call'></i><a href="tel:+420777005222">+420 777 005 222</a></li>
+                                <li><i class='bx bxs-envelope'></i><a href="mailto:fitko@trinityclub.cz">fitko@trinityclub.cz</a></li>
+                            </ul>
+                        </div>
+                        <div class="contact-card">
+                            <h3 class="contact-card__title">Provozní Doba</h3>
+                            <ul class="contact-list contact-list--hours">
+                                <li><span>Pondělí - Pátek</span> <span>8:00 - 19:00</span></li>
+                                <li><span>Sobota, Neděle</span> <span>9:00 - 12:00</span></li>
+                            </ul>
+                        </div>
+                         <div class="contact-card">
+                            <h3 class="contact-card__title">Manažeři Klubu</h3>
+                            <ul class="contact-list contact-list--team">
+                                <li><strong>Jiří Černý</strong><br><a href="mailto:jirka@trinityclub.cz">jirka@trinityclub.cz</a><br><a href="tel:+420777271169">777 271 169</a></li>
+                                <li><strong>Hanka Luňáková</strong><br><a href="mailto:hanka@trinityclub.cz">hanka@trinityclub.cz</a><br><a href="tel:+420603571845">603 571 845</a></li>
+                                <li><strong>Martina Krchová</strong><br><a href="mailto:martina@trinityclub.cz">martina@trinityclub.cz</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contact-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1scs!2scz!4v1428417986297!6m8!1m7!1s2PBT1m3Oq4AAAAQWs8Va9A!2m2!1d50.074936!2d12.374594!3f0.7!4f7.450000000000003!5f0.4000000000000002" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="form-wrapper">
+                    <h2 class="section-title">Napište Nám</h2>
+                    <p class="section-subtitle">Máte dotaz? Vyplňte formulář a my se vám co nejdříve ozveme.</p>
+                    <form action="https://www.trinityclub.cz/kontakty?do=form-submit" method="post" class="contact-form">
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Vaše Jméno" required>
+                            <input type="email" name="email" placeholder="Váš E-mail" required>
+                        </div>
+                        <div class="form-row">
+                             <input type="text" name="phone" placeholder="Váš Telefon (nepovinné)">
+                        </div>
+                        <textarea name="msg" placeholder="Vaše zpráva..." rows="6" required></textarea>
+                        <button type="submit" class="hero__button hero__button--primary">Odeslat Zprávu</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer class="footer">
-        </footer>
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <a href="index.html" class="navbar__logo"><img src="img/logo.png" alt="Trinity Club Logo"></a>
+                    <p class="footer__col-text">Moderní fitness centrum v srdci Chebu, které vede Jiří Černý. Staňte se součástí naší komunity.</p>
+                    <div class="footer__socials">
+                        <a href="https://www.facebook.com/SKTrinityCheb" target="_blank" title="Facebook"><i class='bx bxl-facebook-square'></i></a>
+                        <a href="https://www.instagram.com/sktrinity/" target="_blank" title="Instagram"><i class='bx bxl-instagram-alt'></i></a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Kontakt</h4>
+                    <ul class="footer__list">
+                        <li><i class='bx bxs-map'></i><span>Evropská 1566/41, 350 02 Cheb, Česko</span></li>
+                        <li><i class='bx bxs-phone-call'></i><a href="tel:+420777005222">777 005 222</a></li>
+                        <li><i class='bx bxs-envelope'></i><a href="mailto:info@trinityclub.cz">info@trinityclub.cz</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Provozní doba</h4>
+                    <ul class="footer__list footer__list--hours">
+                        <li><span>Pondělí - Pátek</span> <span>8:00 - 20:00</span></li>
+                        <li><span>Sobota</span> <span>9:00 - 12:00</span></li>
+                        <li><span>Neděle</span> <span>9:00 - 12:00</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2025 Trinity Club Cheb | Provozovatel: Jiří Černý, IČO: 75338631</p>
+                <p>Redesign by Max</p>
+            </div>
+        </div>
+    </footer>
     <script src="js/main.js"></script>
 </body>
 </html>

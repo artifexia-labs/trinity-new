@@ -1,7 +1,4 @@
 /* --- Стили для страницы "Cvičení" --- */
-.classes-page {
-    padding-bottom: 80px;
-}
 
 /* --- Вступительный блок --- */
 .classes-hero {
@@ -58,10 +55,10 @@
 .class-item__image {
     width: 100%;
     height: 100%;
-    display: flex; /* Для центрирования иконки */
-    align-items: center; /* Для центрирования иконки */
-    justify-content: center; /* Для центрирования иконки */
-    background-color: #e9ecef; /* Фон для иконок */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: #e9ecef; 
 }
 .class-item__image img {
     width: 100%;
@@ -70,8 +67,8 @@
     display: block;
 }
 .class-item__image--icon i {
-    font-size: 100px; /* Размер иконки */
-    color: var(--primary-color); /* Цвет иконки */
+    font-size: 100px;
+    color: var(--primary-color);
 }
 .class-item__content {
     padding: 30px;
@@ -91,14 +88,12 @@
         grid-template-columns: 1fr;
     }
     .class-item__image {
-        height: 200px; /* Фиксированная высота для изображений и иконок на мобильных */
+        height: 200px;
     }
 }
 
 
 /* --- СЕКЦИЯ С КОМАНДОЙ --- */
-
-/* Сетка для главных инструкторов */
 .team-featured {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -115,7 +110,6 @@
     align-items: center;
     padding: 25px;
     border: 2px solid #e9ecef;
-    /* Стили для анимации */
     transform: scale(0.95);
     opacity: 0;
     transition: transform 0.6s ease, opacity 0.6s ease;

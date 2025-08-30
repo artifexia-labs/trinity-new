@@ -6,20 +6,24 @@
     justify-content: center;
     text-align: center;
     padding: 80px 24px;
-    background-color: var(--white-color);
-    flex-grow: 1; /* Эта строка заставит секцию занять всё доступное место, прижав футер вниз на этой конкретной странице. */
+    background-color: var(--light-gray-color);
+    flex-grow: 1; /* Эта строка заставит секцию занять всё доступное место */
 }
 
 .placeholder-content {
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto;
+    background-color: var(--white-color); /* Белый фон для карточки */
+    padding: 50px 40px; /* Увеличенные внутренние отступы */
+    border-radius: 12px; /* Скругленные углы */
+    box-shadow: 0 8px 30px rgba(0,0,0,0.07); /* Мягкая тень для объема */
 }
 
 .placeholder-icon {
-    font-size: 80px;
+    font-size: 70px;
     color: var(--primary-color);
-    opacity: 0.5;
-    margin-bottom: 20px;
+    opacity: 0.6;
+    margin-bottom: 25px;
 }
 
 .placeholder-title {
@@ -32,5 +36,15 @@
 .placeholder-text {
     font-size: 18px;
     color: #6c757d;
-    margin-bottom: 30px;
+    margin-bottom: 35px; /* Увеличенный отступ до кнопки */
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 576px) {
+    .placeholder-content {
+        padding: 40px 25px;
+    }
+    .placeholder-title {
+        font-size: 30px;
+    }
 }

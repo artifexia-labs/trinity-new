@@ -1,0 +1,173 @@
+/* --- Стили для страницы "Kontakty" --- */
+
+/* --- Вступительный блок --- */
+.contact-hero {
+    padding: 80px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../www.trinityclub.cz/akce5d92.jpg');
+    background-size: cover;
+    background-position: center 40%;
+    color: var(--white-color);
+}
+.contact-hero__title {
+    font-size: 42px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.contact-hero__subtitle {
+    font-size: 18px;
+    color: #e0e0e0;
+    max-width: 700px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* --- Секция с контактами и картой --- */
+.contact-info-section {
+    padding: 80px 0;
+    background-color: var(--light-gray-color);
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    align-items: flex-start;
+}
+.contact-card {
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+.contact-card:last-child {
+    margin-bottom: 0;
+}
+.contact-card__title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+.contact-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.contact-list li:last-child {
+    margin-bottom: 0;
+}
+.contact-list i {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-right: 15px;
+    margin-top: 2px;
+}
+.contact-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.contact-list a:hover {
+    color: var(--primary-color-dark);
+    text-decoration: underline;
+}
+.contact-list--hours span:first-child {
+    font-weight: 600;
+    margin-right: auto;
+}
+.contact-list--team li {
+    display: block;
+}
+.contact-list--team a {
+    font-size: 15px;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 550px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-map {
+        order: -1;
+        margin-bottom: 40px;
+        min-height: 400px;
+    }
+}
+
+/* --- Секция с формой --- */
+.contact-form-section {
+    padding: 80px 0;
+    background-color: var(--white-color);
+}
+.form-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--light-gray-color);
+    padding: 40px;
+    border-radius: 12px;
+}
+.form-wrapper .section-title {
+    margin-bottom: 10px;
+}
+.form-wrapper .section-subtitle {
+    margin-bottom: 30px;
+}
+.contact-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.contact-form .form-row:nth-of-type(2) {
+    grid-template-columns: 1fr; /* Для телефона делаем одно поле в ряду */
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    font-family: var(--font-family-base);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+}
+.contact-form textarea {
+    margin-bottom: 20px;
+    resize: vertical;
+}
+.contact-form button {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+
+@media (max-width: 576px) {
+    .form-row {
+        grid-template-columns: 1fr !important;
+    }
+    .form-wrapper {
+        padding: 30px 20px;
+    }
+}

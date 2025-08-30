@@ -1,7 +1,4 @@
 /* --- Стили для страницы "Služby" --- */
-.services-page {
-    padding-bottom: 80px;
-}
 
 /* --- Вступительный блок --- */
 .services-hero {
@@ -109,7 +106,7 @@
 /* --- Секция с картой --- */
 .map-section {
     padding: 80px 0;
-    background-color: var(--light-gray-color); /* Сделаем фон чуть другим для разнообразия */
+    background-color: var(--light-gray-color);
 }
 .map-container {
     border-radius: 12px;

@@ -3,46 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trinity Club - Moderní Redesign</title>
+    <title>Trinity Club Cheb</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
     <header class="header">
         <nav class="navbar">
-            <a href="index.html" class="navbar__logo">
-                <img src="img/logo.png" alt="Trinity Club Logo">
-            </a>
-           <ul class="navbar__menu">
-    <li><a href="cviceni.html">Cvičení</a></li>
-    <li><a href="cenik.html">Ceník</a></li>
-    <li><a href="sluzby.html">Služby</a></li>
-    <li><a href="kavarna.html">Kavárna</a></li>
-    <li><a href="aktuality.html">Aktuality</a></li>
-    <li><a href="o-nas.html">O nás</a></li>
-    <li><a href="kontakty.html">Kontakty</a></li>
+            <a href="index.html" class="navbar__logo"><img src="img/logo.png" alt="Trinity Club Logo"></a>
+            <ul class="navbar__menu">
+                <li><a href="cviceni.html">Cvičení</a></li>
+                <li><a href="cenik.html">Ceník</a></li>
+                <li><a href="sluzby.html">Služby</a></li>
+                <li><a href="kavarna.html">Kavárna</a></li>
+                <li><a href="aktuality.html">Aktuality</a></li>
+                <li><a href="o-nas.html">O nás</a></li>
+                <li><a href="kontakty.html">Kontakty</a></li>
             </ul>
-            <a href="http://rezervace.trinityclub.cz/" target="_blank" class="navbar__cta-button">
-                ROZVRH
-            </a>
-            <button class="navbar__menu-toggle" id="menu-toggle">
-                <i class='bx bx-menu'></i>
-            </button>
+            <a href="http://rezervace.trinityclub.cz/" target="_blank" class="navbar__cta-button">ROZVRH</a>
+            <button class="navbar__menu-toggle" id="menu-toggle"><i class='bx bx-menu'></i></button>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <div class="hero__content">
+            <div class="swiper hero-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('img/evropska.jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('img/posilovani.jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('img/fotka12345.jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('img/kavarna/1.jpg');"></div>
+                </div>
+            </div>
+            <div class="hero__overlay"></div> 
+            <div class="hero__content container">
                 <h1 class="hero__title">Nezáleží na věku, když chceš udělat změnu!</h1>
                 <p class="hero__subtitle">Moderní fitness centrum v srdci Chebu. Připojte se k nám a začněte svou transformaci ještě dnes.</p>
                 <div class="hero__buttons">
-                    <a href="http://rezervace.trinityclub.cz/" target="_blank" class="hero__button hero__button--primary">Chci cvičit</a>
+                    <a href="cviceni.html" class="hero__button hero__button--primary">Chci cvičit</a>
                     <a href="cenik.html" class="hero__button hero__button--secondary">Prozkoumat ceník</a>
                 </div>
             </div>
@@ -85,7 +92,7 @@
                         <p class="benefits__item-text">Klubové členství jako nejlepší motivace pro pravidelné cvičení.</p>
                     </div>
                     <div class="benefits__item">
-                        <div class="benefits__icon"><i class='bx bx-heart-pulse'></i></div>
+                        <div class="benefits__icon"><i class='bx  bx-pulse'  ></i></div>
                         <h3 class="benefits__item-title">Zlepšení zdraví a kondice</h3>
                         <p class="benefits__item-text">Dosáhni zlepšení zdraví a fyzické i psychické kondice s námi.</p>
                     </div>
@@ -133,7 +140,8 @@
             </div>
         </div>
     </footer>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
