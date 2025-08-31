@@ -371,13 +371,10 @@ main {
 }
 .footer__grid {
     display: grid;
-    grid-template-columns: 2fr 1.5fr 1fr; 
+    /* Изменено на 4 колонки */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 40px;
     margin-bottom: 60px;
-}
-.footer__logo img {
-    max-height: 60px;
-    margin-bottom: 20px;
 }
 .footer__col-title {
     font-size: 18px;
@@ -443,6 +440,30 @@ main {
     font-size: 14px;
     line-height: 1.6;
 }
+
+/* === Новые стили === */
+.footer__list .footer__sublist {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #888;
+}
+.footer__list .footer__sublist li {
+    margin-bottom: 4px;
+}
+.footer__list > li {
+    display: block; /* Чтобы вложенный список был под ссылкой */
+}
+.footer__list--partners li {
+    display: block;
+    margin-bottom: 8px;
+}
+.footer__hours {
+    align-items: flex-start;
+}
+/* === Конец новых стилей === */
+
 @media (max-width: 992px) {
     .footer__grid {
         grid-template-columns: 1fr 1fr;

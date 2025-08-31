@@ -111,3 +111,137 @@
         font-size: 18px;
     }
 }
+/* --- Секция "Для кого наш клуб?" --- */
+.who-for {
+    padding: 80px 0;
+    background-color: var(--white-color);
+}
+.who-for__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+.who-for__card {
+    text-align: center;
+    padding: 30px;
+}
+.who-for__icon {
+    font-size: 50px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+.who-for__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.who-for__text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #6c757d;
+}
+
+/* --- Улучшения для секции преимуществ --- */
+.benefits__item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+.benefits__grid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+}
+.benefits__item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.benefits__item-text {
+    flex-grow: 1;
+}
+
+/* --- Улучшения для секции новостей --- */
+.news__cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* --- Финальный блок CTA --- */
+.final-cta {
+    padding: 80px 0;
+    background-color: var(--light-gray-color);
+}
+.cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.cta-card {
+    background-color: var(--white-color);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+.cta-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+.cta-card--primary {
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+.cta-card--primary:hover {
+    transform: scale(1.08) translateY(-5px);
+}
+.cta-card__badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.cta-card__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.cta-card__description {
+    font-size: 16px;
+    color: #6c757d;
+    margin-bottom: 25px;
+    min-height: 70px; /* Чтобы карточки были одной высоты */
+}
+.cta-card__price {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.cta-card .hero__button {
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .cta-grid {
+        grid-template-columns: 1fr;
+    }
+    .cta-card--primary {
+        transform: scale(1);
+    }
+     .cta-card--primary:hover {
+        transform: translateY(-5px);
+    }
+    .cta-card__description {
+        min-height: unset;
+    }
+}
