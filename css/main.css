@@ -245,3 +245,113 @@
         min-height: unset;
     }
 }
+/* --- Стили для Актуальных Новостей --- */
+.actual-news {
+    padding: 80px 0;
+    background-color: var(--white-color);
+}
+
+.news-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+    background-color: var(--light-gray-color);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.news-item--highlight {
+    background-color: #e6f7ff; /* Более светлый цвет для важной новости */
+    border: 2px solid var(--primary-color);
+}
+
+.news-item__content {
+    flex: 2; /* Контент занимает больше места */
+}
+
+.news-item__media {
+    flex: 1; /* Медиа занимает меньше места */
+    min-width: 250px;
+    text-align: center;
+}
+
+.news-item__media video,
+.news-item__media img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block; /* Убираем лишний отступ под изображением/видео */
+}
+
+.news-item__video-caption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.news-item__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--header-bg-color);
+    margin-bottom: 10px;
+}
+
+.news-item__date {
+    font-size: 14px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.news-item__text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #495057;
+    margin-bottom: 20px;
+}
+
+.news-item__link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.news-item__link:hover {
+    color: var(--header-bg-color);
+    text-decoration: underline;
+}
+
+.news__all-link {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .news-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        padding: 20px;
+    }
+    .news-item__content,
+    .news-item__media {
+        flex: none;
+        width: 100%;
+    }
+    .news-item__title {
+        font-size: 20px;
+    }
+}
+/* --- Исправление для видео, чтобы избежать скачков колонки --- */
+.news-item__media video {
+    /* Добавляем минимальные размеры для видео, чтобы оно не "хлопало" при загрузке */
+    min-width: 250px; /* Минимальная ширина, как у родителя */
+    min-height: 200px; /* Примерная минимальная высота, подбери подходящую */
+    background-color: #000; /* Черный фон до загрузки видео */
+}
