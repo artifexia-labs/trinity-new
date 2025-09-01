@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cvičení a Tým - Trinity Club Redesign</title>
+    <title data-translate-key="page_title">Cvičení a Tým - Trinity Club Redesign</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,21 +15,33 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cviceni.css">
 </head>
-<body class="classes-page">
+<body class="classes-page" data-page="cviceni">
 
     <header class="header">
         <nav class="navbar">
             <a href="index.html" class="navbar__logo"><img src="img/logo.png" alt="Trinity Club Logo"></a>
             <ul class="navbar__menu">
-    <li><a href="cviceni.html" class="active">Cvičení</a></li>
-    <li><a href="cenik.html">Ceník</a></li>
-    <li><a href="sluzby.html">Služby</a></li>
-    <li><a href="kavarna.html">Kavárna</a></li>
-    <li><a href="aktuality.html">Aktuality</a></li>
-    <li><a href="o-nas.html">O nás</a></li>
-    <li><a href="kontakty.html">Kontakty</a></li>
+                <li><a href="cviceni.html" class="active" data-translate-key="nav_cviceni">Cvičení</a></li>
+                <li><a href="cenik.html" data-translate-key="nav_cenik">Ceník</a></li>
+                <li><a href="sluzby.html" data-translate-key="nav_sluzby">Služby</a></li>
+                <li><a href="kavarna.html" data-translate-key="nav_kavarna">Kavárna</a></li>
+                <li><a href="aktuality.html" data-translate-key="nav_aktuality">Aktuality</a></li>
+                <li><a href="o-nas.html" data-translate-key="nav_onas">O nás</a></li>
+                <li><a href="kontakty.html" data-translate-key="nav_kontakty">Kontakty</a></li>
             </ul>
-            <a href="http://rezervace.trinityclub.cz/" target="_blank" class="navbar__cta-button">ROZVRH</a>
+             <div class="language-switcher">
+    <button class="language-switcher__button" id="lang-switcher-button">
+        <img src="https://flagcdn.com/w40/cz.png" alt="cs" id="current-lang-flag">
+        <span class="language-switcher__code" id="current-lang-code">CS</span>
+    </button>
+    <ul class="language-switcher__dropdown" id="lang-switcher-dropdown">
+        <li><a href="#" class="lang-btn" data-lang="cs"><img src="https://flagcdn.com/w40/cz.png" alt="cs"> <span>Čeština</span></a></li>
+        <li><a href="#" class="lang-btn" data-lang="ru"><img src="https://flagcdn.com/w40/ru.png" alt="ru"> <span>Русский</span></a></li>
+        <li><a href="#" class="lang-btn" data-lang="en"><img src="https://flagcdn.com/w40/gb.png" alt="en"> <span>English</span></a></li>
+        <li><a href="#" class="lang-btn" data-lang="de"><img src="https://flagcdn.com/w40/de.png" alt="de"> <span>Deutsch</span></a></li>
+    </ul>
+</div>
+            <a href="http://rezervace.trinityclub.cz/" target="_blank" class="navbar__cta-button" data-translate-key="nav_rozvrh">ROZVRH</a>
             <button class="navbar__menu-toggle" id="menu-toggle"><i class='bx bx-menu'></i></button>
         </nav>
     </header>
@@ -37,69 +49,69 @@
     <main>
         <section class="classes-hero">
             <div class="container">
-                <h1 class="classes-hero__title">Naše Lekce a Tým</h1>
-                <p class="classes-hero__subtitle">Objevte širokou škálu cvičení, které nabízíme, a seznamte se s týmem profesionálů, kteří vám pomohou dosáhnout vašich cílů.</p>
+                <h1 class="classes-hero__title" data-translate-key="hero_title">Naše Lekce a Tým</h1>
+                <p class="classes-hero__subtitle" data-translate-key="hero_subtitle">Objevte širokou škálu cvičení, které nabízíme, a seznamte se s týmem profesionálů, kteří vám pomohou dosáhnout vašich cílů.</p>
             </div>
         </section>
 
         <section class="classes-section">
             <div class="container">
-                <h2 class="section-title">Co u nás můžeš cvičit</h2>
+                <h2 class="section-title" data-translate-key="classes_title">Co u nás můžeš cvičit</h2>
                 <div class="class-list">
                     <div class="class-item">
                         <div class="class-item__image"><img src="img/posilovani.jpg" alt="Posilovna"></div>
                         <div class="class-item__content">
-                            <h3 class="class-item__title">Posilovna</h3>
-                            <p class="class-item__text">Že posilovna není nic pro tebe? Naopak. U nás zjistíš, že správným vedením instruktorů, protáhneš celé tělo a posílíš své svalstvo. V posilovně na tebe čeká instruktor, který ti se vším poradí a vytvoří Ti trénink. Samozřejmostí je zajištění pitného režimu přímo na posilovně.</p>
+                            <h3 class="class-item__title" data-translate-key="class_gym_title">Posilovna</h3>
+                            <p class="class-item__text" data-translate-key="class_gym_text">Že posilovna není nic pro tebe? Naopak. U nás zjistíš, že správným vedením instruktorů, protáhneš celé tělo a posílíš své svalstvo. V posilovně na tebe čeká instruktor, který ti se vším poradí a vytvoří Ti trénink. Samozřejmostí je zajištění pitného režimu přímo na posilovně.</p>
                         </div>
                     </div>
                     <div class="class-item">
                         <div class="class-item__image class-item__image--icon"><i class='bx bxs-heart-circle'></i></div>
                         <div class="class-item__content">
-                            <h3 class="class-item__title">Kardio zóna</h3>
-                            <p class="class-item__text">Běhací pásy, chodící pásy, stacionární kola, veslovací trenažéry. Zájem o cardio, je u nás opravdu velký. Naučíme tě správně ovládat všechny stroje a cvičení na nich, se pro tebe stane závislostí. A navíc se na nich parádně spaluje! K dispozici máme různé druhy tréninků.</p>
+                            <h3 class="class-item__title" data-translate-key="class_cardio_title">Kardio zóna</h3>
+                            <p class="class-item__text" data-translate-key="class_cardio_text">Běhací pásy, chodící pásy, stacionární kola, veslovací trenažéry. Zájem o cardio, je u nás opravdu velký. Naučíme tě správně ovládat všechny stroje a cvičení na nich, se pro tebe stane závislostí. A navíc se na nich parádně spaluje! K dispozici máme různé druhy tréninků.</p>
                         </div>
                     </div>
                     <div class="class-item">
                         <div class="class-item__image"><img src="img/slimbox.jpg" alt="Slimbox"></div>
                         <div class="class-item__content">
-                            <h3 class="class-item__title">Slimbox</h3>
-                            <p class="class-item__text">Hudba, pohyb, tanec, trocha úderů z bojového umění, posilování – prostě pohyb! Aerobní cvičení, které si našlo oblibu u všech klientů. Avšak u žen to občas vypadá, že si namísto pytle, představují konkrétní osobu :-)</p>
+                            <h3 class="class-item__title" data-translate-key="class_slimbox_title">Slimbox</h3>
+                            <p class="class-item__text" data-translate-key="class_slimbox_text">Hudba, pohyb, tanec, trocha úderů z bojového umění, posilování – prostě pohyb! Aerobní cvičení, které si našlo oblibu u všech klientů. Avšak u žen to občas vypadá, že si namísto pytle, představují konkrétní osobu :-)</p>
                         </div>
                     </div>
                      <div class="class-item">
                         <div class="class-item__image class-item__image--icon"><i class='bx bxs-circle-three-quarter'></i></div>
                         <div class="class-item__content">
-                            <h3 class="class-item__title">T-Bow</h3>
-                            <p class="class-item__text">Cvičení, obsahuje aerobní, balanční a posilovací aktivity v jednom. Zaměřujeme se na hluboké svalstvo, kdy zjistíš, že ho v těle také máš. Cvičení je podobné známějšímu Bosu, jen se používá jiné nářadí.</p>
+                            <h3 class="class-item__title" data-translate-key="class_tbow_title">T-Bow</h3>
+                            <p class="class-item__text" data-translate-key="class_tbow_text">Cvičení, obsahuje aerobní, balanční a posilovací aktivity v jednom. Zaměřujeme se na hluboké svalstvo, kdy zjistíš, že ho v těle také máš. Cvičení je podobné známějšímu Bosu, jen se používá jiné nářadí.</p>
                         </div>
                     </div>
                     <div class="class-item">
                         <div class="class-item__image"><img src="img/koule.jpg" alt="Cvičení na míčích"></div>
                         <div class="class-item__content">
-                            <h3 class="class-item__title">Cvičení na míčích</h3>
-                            <p class="class-item__text">Cvičení na míčích je stále více vyhledávaná aktivita. Při tomto cvičení si nenásilně protáhneš celé tělo, příjemně si zaposiluješ a zjistíš, kde všude vlastně máš svaly. To vše samozřejmě při hudbě a s úsměvem na tváři :-)</p>
+                            <h3 class="class-item__title" data-translate-key="class_balls_title">Cvičení na míčích</h3>
+                            <p class="class-item__text" data-translate-key="class_balls_text">Cvičení na míčích je stále více vyhledávaná aktivita. Při tomto cvičení si nenásilně protáhneš celé tělo, příjemně si zaposiluješ a zjistíš, kde všude vlastně máš svaly. To vše samozřejmě při hudbě a s úsměvem na tváři :-)</p>
                         </div>
                     </div>
                     <div class="class-item">
                         <div class="class-item__image class-item__image--icon"><i class='bx bxs-leaf'></i></div>
                         <div class="class-item__content">
-                            <h3 class="class-item__title">Relaxační cvičení</h3>
-                            <p class="class-item__text">Tak to je opravdu pohoda. Při těchto lekcích si svoje tělo protáhneš a zároveň budeš cítit, že pro něj něco děláš. Určitě si lehneš i na podložku a chvilku budeš relaxovat. A když usneš, přikryjeme Tě a můžeš se u nás prospat :-)</p>
+                            <h3 class="class-item__title" data-translate-key="class_relax_title">Relaxační cvičení</h3>
+                            <p class="class-item__text" data-translate-key="class_relax_text">Tak to je opravdu pohoda. Při těchto lekcích si svoje tělo protáhneš a zároveň budeš cítit, že pro něj něco děláš. Určitě si lehneš i na podložku a chvilku budeš relaxovat. A když usneš, přikryjeme Tě a můžeš se u nás prospat :-)</p>
                         </div>
                     </div>
                     <div class="class-item">
                         <div class="class-item__image"><img src="img/rozcvicka.jpg" alt="Kondiční lekce"></div>
                         <div class="class-item__content">
-                            <h3 class="class-item__title">Kondiční lekce</h3>
-                            <p class="class-item__text">Pokud si myslíš, že jde o pohodovou lekci, tak ti doporučujeme přijít na naší Kondiční hodinu. Na první pohled je to jednoduché, ale naši instruktoři tě přesvědčí, že si dáš pěkně do těla a navíc tě to bude bavit.</p>
+                            <h3 class="class-item__title" data-translate-key="class_condition_title">Kondiční lekce</h3>
+                            <p class="class-item__text" data-translate-key="class_condition_text">Pokud si myslíš, že jde o pohodovou lekci, tak ti doporučujeme přijít na naší Kondiční hodinu. Na první pohled je to jednoduché, ale naši instruktoři tě přesvědčí, že si dáš pěkně do těla a navíc tě to bude bavit.</p>
                         </div>
                     </div>
                     <div class="class-item">
                         <div class="class-item__image"><img src="img/tabata.jpg" alt="Tabata"></div>
                         <div class="class-item__content">
-                            <h3 class="class-item__title">Tabata</h3>
-                            <p class="class-item__text">Tabata je kardiovaskulární trénink, který prokazatelně zlepšuje výkonnost a fitness ve velmi krátkém čase. Cvičení se skládá z osmi 20 sekundových cviků prováděných na 100 %, proložených dobou odpočinku 10 sekund.</p>
+                            <h3 class="class-item__title" data-translate-key="class_tabata_title">Tabata</h3>
+                            <p class="class-item__text" data-translate-key="class_tabata_text">Tabata je kardiovaskulární trénink, který prokazatelně zlepšuje výkonnost a fitness ve velmi krátkém čase. Cvičení se skládá z osmi 20 sekundových cviků prováděných na 100 %, proložených dobou odpočinku 10 sekund.</p>
                         </div>
                     </div>
                 </div>
@@ -108,28 +120,28 @@
 
         <section class="classes-section classes-section--dark-bg">
             <div class="container">
-                <h2 class="section-title">Podívej se, kdo jsme</h2>
+                <h2 class="section-title" data-translate-key="team_title">Podívej se, kdo jsme</h2>
                 
                 <div class="team-featured">
                     <div class="featured-card">
                         <div class="featured-card__image"><img src="img/jiri_cerny.jpg" alt="Jiří Černý"></div>
                         <div class="featured-card__content">
                             <h3 class="featured-card__name">Jiří Černý</h3>
-                            <p class="featured-card__role">Specializace: slim box, spinning, fitness</p>
-                            <p class="featured-card__text">Snad si splnil sen a fitko běží, jak má. Potkáš ho na spinningu, slim boxu, fitness, na recepci, v kanceláři, prostě všude.</p>
+                            <p class="featured-card__role" data-translate-key="team_jiri_role">Specializace: slim box, spinning, fitness</p>
+                            <p class="featured-card__text" data-translate-key="team_jiri_text">Snad si splnil sen a fitko běží, jak má. Potkáš ho na spinningu, slim boxu, fitness, na recepci, v kanceláři, prostě všude.</p>
                         </div>
                     </div>
                     <div class="featured-card">
                         <div class="featured-card__image"><img src="img/hana_lunakova.jpg" alt="Hanka Luňáková"></div>
                         <div class="featured-card__content">
                             <h3 class="featured-card__name">Hanka Luňáková</h3>
-                            <p class="featured-card__role">Specializace: zumba, slim box, spinning, míče...</p>
-                            <p class="featured-card__text">Když začínala, uměla hlavně tančit. Postupně se jí dostal pod kůži spinning, fitbox a míče, zumba a cvičení s dětmi.</p>
+                            <p class="featured-card__role" data-translate-key="team_hanka_role">Specializace: zumba, slim box, spinning, míče...</p>
+                            <p class="featured-card__text" data-translate-key="team_hanka_text">Když začínala, uměla hlavně tančit. Postupně se jí dostal pod kůži spinning, fitbox a míče, zumba a cvičení s dětmi.</p>
                         </div>
                     </div>
                 </div>
 
-                <h3 class="team-secondary-title">A zbytek našeho skvělého týmu</h3>
+                <h3 class="team-secondary-title" data-translate-key="team_secondary_title">A zbytek našeho skvělého týmu</h3>
 
                 <div class="team-section">
                     <div class="swiper team-slider">
@@ -138,48 +150,48 @@
                                 <div class="team-card">
                                     <div class="team-card__image">OM</div>
                                     <h3 class="team-card__name">Ondra Maryška</h3>
-                                    <p class="team-card__role">Specializace: kondiční lekce, fitness</p>
-                                    <p class="team-card__text">Ondra patří mezi naše nejmladší instruktory a jsme moc rádi, že ho máme.</p>
+                                    <p class="team-card__role" data-translate-key="team_ondra_role">Specializace: kondiční lekce, fitness</p>
+                                    <p class="team-card__text" data-translate-key="team_ondra_text">Ondra patří mezi naše nejmladší instruktory a jsme moc rádi, že ho máme.</p>
                                 </div>
                             </div>
                              <div class="swiper-slide">
                                 <div class="team-card">
                                     <div class="team-card__image">VM</div>
                                     <h3 class="team-card__name">Václav Macek</h3>
-                                    <p class="team-card__role">Specialista na posilovně</p>
-                                    <p class="team-card__text">Vždy rád poradí, jak správně cvičit. Pracuje i s dětmi při jejich přípravě na sporty.</p>
+                                    <p class="team-card__role" data-translate-key="team_vaclav_role">Specialista na posilovně</p>
+                                    <p class="team-card__text" data-translate-key="team_vaclav_text">Vždy rád poradí, jak správně cvičit. Pracuje i s dětmi při jejich přípravě na sporty.</p>
                                 </div>
                             </div>
                              <div class="swiper-slide">
                                 <div class="team-card">
                                     <div class="team-card__image">KB</div>
                                     <h3 class="team-card__name">Klára Baláková</h3>
-                                    <p class="team-card__role">Specializace: Jóga a Jógalátes</p>
-                                    <p class="team-card__text">Klárка má nejraději pomalejší cvičení. Ráda se pouští do nových aktivit.</p>
+                                    <p class="team-card__role" data-translate-key="team_klara_role">Specializace: Jóga a Jógalátes</p>
+                                    <p class="team-card__text" data-translate-key="team_klara_text">Klárка má nejraději pomalejší cvičení. Ráda se pouští do nových aktivit.</p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="team-card">
                                     <div class="team-card__image">MK</div>
                                     <h3 class="team-card__name">Martina Krchová</h3>
-                                    <p class="team-card__role">Provozní manažer, cvičení pro děti</p>
-                                    <p class="team-card__text">Martina je duší celé organizace. Děti jejich hodiny milují.</p>
+                                    <p class="team-card__role" data-translate-key="team_martina_role">Provozní manažer, cvičení pro děti</p>
+                                    <p class="team-card__text" data-translate-key="team_martina_text">Martina je duší celé organizace. Děti jejich hodiny milují.</p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="team-card">
                                     <div class="team-card__image">JD</div>
                                     <h3 class="team-card__name">Jana Durcová</h3>
-                                    <p class="team-card__role">Recepce</p>
-                                    <p class="team-card__text">Na recepci na Vás bude čekat vždy s úsměvem na tváři.</p>
+                                    <p class="team-card__role" data-translate-key="team_jana_role">Recepce</p>
+                                    <p class="team-card__text" data-translate-key="team_jana_text">Na recepci na Vás bude čekat vždy s úsměvem na tváři.</p>
                                 </div>
                             </div>
                              <div class="swiper-slide">
                                 <div class="team-card">
                                     <div class="team-card__image">BD</div>
                                     <h3 class="team-card__name">Blanka Dlesková</h3>
-                                    <p class="team-card__role">Recepce</p>
-                                    <p class="team-card__text">Snaží se mít všechno pod kontrolou a miluje pohyb.</p>
+                                    <p class="team-card__role" data-translate-key="team_blanka_role">Recepce</p>
+                                    <p class="team-card__text" data-translate-key="team_blanka_text">Snaží se mít všechno pod kontrolou a miluje pohyb.</p>
                                 </div>
                             </div>
                         </div>
@@ -192,21 +204,21 @@
 
         <section class="classes-section">
             <div class="container">
-                <h2 class="section-title">Další Služby</h2>
+                <h2 class="section-title" data-translate-key="services_title">Další Služby</h2>
                 <div class="services-grid">
                     <div class="service-item">
-                        <h3 class="service-item__title">Kinesio Taping</h3>
-                        <p>Lepení elastických bavlněných pásek na postiženou oblast pro:</p>
-                        <ul>
+                        <h3 class="service-item__title" data-translate-key="service_kinesio_title">Kinesio Taping</h3>
+                        <p data-translate-key="service_kinesio_text_1">Lepení elastických bavlněných pásek na postiženou oblast pro:</p>
+                        <ul data-translate-key="service_kinesio_list">
                             <li>Relaxaci namožených, natažených nebo natržených svalů</li>
                             <li>Stimulaci oslabených nebo naopak uvolnění zatuhlých svalů</li>
                             <li>Zredukování bolesti, otoků a modřin</li>
                         </ul>
                     </div>
                     <div class="service-item">
-                        <h3 class="service-item__title">Diagnostika a Monitoring</h3>
-                        <p>Provádíme vážení a měření tuků. Hodnoty zaznamenáme a v pravidelných intervalech kontrolujeme. Společně tak dosáhneme rychleji tvého cíle.</p>
-                        <p>Pokud jsi zvědavý na to, jak se chová tvoje srdce při cvičení, přijď monitoring srdce vyzkoušet.</p>
+                        <h3 class="service-item__title" data-translate-key="service_diag_title">Diagnostika a Monitoring</h3>
+                        <p data-translate-key="service_diag_text_1">Provádíme vážení a měření tuků. Hodnoty zaznamenáme a v pravidelných intervalech kontrolujeme. Společně tak dosáhneme rychleji tvého cíle.</p>
+                        <p data-translate-key="service_diag_text_2">Pokud jsi zvědavý na to, jak se chová tvoje srdce při cvičení, přijď monitoring srdce vyzkoušet.</p>
                     </div>
                 </div>
             </div>
@@ -214,9 +226,9 @@
 
         <section class="cta-section">
             <div class="container">
-                <h2 class="cta-section__title">Připraven začít?</h2>
-                <p>Prohlédni si náš aktuální rozvrh skupinových lekcí a rezervuj si své místo ještě dnes. Těšíme se na tebe!</p>
-                <a href="http://rezervace.trinityclub.cz/" target="_blank" class="hero__button hero__button--primary">Zobrazit Rozvrh a Rezervovat</a>
+                <h2 class="cta-section__title" data-translate-key="cta_title">Připraven začít?</h2>
+                <p data-translate-key="cta_text">Prohlédni si náš aktuální rozvrh skupinových lekcí a rezervuj si své místo ještě dnes. Těšíme se na tebe!</p>
+                <a href="http://rezervace.trinityclub.cz/" target="_blank" class="hero__button hero__button--primary" data-translate-key="cta_button">Zobrazit Rozvrh a Rezervovat</a>
             </div>
         </section>
     </main>
@@ -226,7 +238,7 @@
         <div class="footer__grid">
             <div class="footer__col">
                 <a href="index.html" class="navbar__logo"><img src="img/logo.png" alt="Trinity Club Logo"></a>
-                <p class="footer__col-text">Moderní fitness centrum v srdci Chebu, které vede Jiří Černý. Staňte se součástí naší komunity.</p>
+                <p class="footer__col-text" data-translate-key="footer_desc">Moderní fitness centrum v srdci Chebu, které vede Jiří Černý. Staňte se součástí naší komunity.</p>
                 <div class="footer__socials">
                     <a href="https://www.facebook.com/SKTrinityCheb" target="_blank" title="Facebook"><i class='bx bxl-facebook-square'></i></a>
                     <a href="https://www.instagram.com/sktrinity/" target="_blank" title="Instagram"><i class='bx bxl-instagram-alt'></i></a>
@@ -234,18 +246,18 @@
             </div>
 
             <div class="footer__col">
-                <h4 class="footer__col-title">Naše další projekty</h4>
+                <h4 class="footer__col-title" data-translate-key="footer_projects_title">Naše další projekty</h4>
                 <ul class="footer__list">
                     <li>
                         <strong><a href="http://www.sktrinity.cz/" target="_blank">SK TRINITY</a></strong>
-                        <ul class="footer__sublist">
+                        <ul class="footer__sublist" data-translate-key="footer_sk_trinity_desc">
                             <li>Děti 6-14 let</li>
                             <li>Plavání, Sportovka, Dance</li>
                         </ul>
                     </li>
                     <li>
                         <strong><a href="http://www.lccheb.cz/" target="_blank">LANOVÉ CENTRUM</a></strong>
-                        <ul class="footer__sublist">
+                        <ul class="footer__sublist" data-translate-key="footer_rope_center_desc">
                             <li>Lanové centrum na levém břehu Ohře</li>
                         </ul>
                     </li>
@@ -253,7 +265,7 @@
             </div>
 
             <div class="footer__col">
-                <h4 class="footer__col-title">Partneři</h4>
+                <h4 class="footer__col-title" data-translate-key="footer_partners_title">Partneři</h4>
                 <ul class="footer__list footer__list--partners">
                     <li>Iveta Top Salon</li>
                     <li>Tiskárna Skyepress Cheb</li>
@@ -263,13 +275,13 @@
             </div>
 
             <div class="footer__col">
-                <h4 class="footer__col-title">Kontakt</h4>
+                <h4 class="footer__col-title" data-translate-key="footer_contact_title">Kontakt</h4>
                 <ul class="footer__list">
                     <li><i class='bx bxs-map'></i><span>Evropská 1566/41, 350 02 Cheb</span></li>
                     <li><i class='bx bxs-phone-call'></i><a href="tel:+420777005222">777 005 222</a></li>
                     <li class="footer__hours">
                         <i class='bx bxs-time-five'></i>
-                        <span>
+                        <span data-translate-key="footer_hours">
                             Po-Pá: 8:00 - 20:00<br>
                             So-Ne: 9:00 - 12:00
                         </span>
@@ -278,8 +290,8 @@
             </div>
         </div>
         <div class="footer__bottom">
-            <p>© 2025 Trinity Club Cheb | Provozovatel: Jiří Černý, IČO: 75338631</p>
-            <p>Redesign by Max</p>
+            <p data-translate-key="footer_copyright">© 2025 Trinity Club Cheb | Provozovatel: Jiří Černý, IČO: 75338631</p>
+            <p data-translate-key="footer_redesign">Redesign by Max</p>
         </div>
     </div>
 </footer>

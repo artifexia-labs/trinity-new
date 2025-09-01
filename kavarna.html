@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kavárna - Trinity Club Redesign</title>
+    <title data-translate-key="page_title">Kavárna - Trinity Club Redesign</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,21 +13,33 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/kavarna.css">
 </head>
-<body class="cafe-page">
+<body class="cafe-page" data-page="kavarna">
 
     <header class="header">
         <nav class="navbar">
             <a href="index.html" class="navbar__logo"><img src="img/logo.png" alt="Trinity Club Logo"></a>
             <ul class="navbar__menu">
-                <li><a href="cviceni.html">Cvičení</a></li>
-                <li><a href="cenik.html">Ceník</a></li>
-                <li><a href="sluzby.html">Služby</a></li>
-                <li><a href="kavarna.html" class="active">Kavárna</a></li>
-                <li><a href="aktuality.html">Aktuality</a></li>
-                <li><a href="o-nas.html">O nás</a></li>
-                <li><a href="kontakty.html">Kontakty</a></li>
+                <li><a href="cviceni.html" data-translate-key="nav_cviceni">Cvičení</a></li>
+                <li><a href="cenik.html" data-translate-key="nav_cenik">Ceník</a></li>
+                <li><a href="sluzby.html" data-translate-key="nav_sluzby">Služby</a></li>
+                <li><a href="kavarna.html" class="active" data-translate-key="nav_kavarna">Kavárna</a></li>
+                <li><a href="aktuality.html" data-translate-key="nav_aktuality">Aktuality</a></li>
+                <li><a href="o-nas.html" data-translate-key="nav_onas">O nás</a></li>
+                <li><a href="kontakty.html" data-translate-key="nav_kontakty">Kontakty</a></li>
             </ul>
-            <a href="http://rezervace.trinityclub.cz/" target="_blank" class="navbar__cta-button">ROZVRH</a>
+             <div class="language-switcher">
+    <button class="language-switcher__button" id="lang-switcher-button">
+        <img src="https://flagcdn.com/w40/cz.png" alt="cs" id="current-lang-flag">
+        <span class="language-switcher__code" id="current-lang-code">CS</span>
+    </button>
+    <ul class="language-switcher__dropdown" id="lang-switcher-dropdown">
+        <li><a href="#" class="lang-btn" data-lang="cs"><img src="https://flagcdn.com/w40/cz.png" alt="cs"> <span>Čeština</span></a></li>
+        <li><a href="#" class="lang-btn" data-lang="ru"><img src="https://flagcdn.com/w40/ru.png" alt="ru"> <span>Русский</span></a></li>
+        <li><a href="#" class="lang-btn" data-lang="en"><img src="https://flagcdn.com/w40/gb.png" alt="en"> <span>English</span></a></li>
+        <li><a href="#" class="lang-btn" data-lang="de"><img src="https://flagcdn.com/w40/de.png" alt="de"> <span>Deutsch</span></a></li>
+    </ul>
+</div>
+            <a href="http://rezervace.trinityclub.cz/" target="_blank" class="navbar__cta-button" data-translate-key="nav_rozvrh">ROZVRH</a>
             <button class="navbar__menu-toggle" id="menu-toggle"><i class='bx bx-menu'></i></button>
         </nav>
     </header>
@@ -35,77 +47,77 @@
     <main>
         <section class="cafe-hero">
             <div class="container">
-                <h1 class="cafe-hero__title">Kavárna pro všechny</h1>
-                <p class="cafe-hero__subtitle">Odměňte se po tréninku nebo si jen tak přijďte vychutnat skvělou kávu, domácí dezerty a čerstvé snacky v příjemném prostředí.</p>
+                <h1 class="cafe-hero__title" data-translate-key="hero_title">Kavárna pro všechny</h1>
+                <p class="cafe-hero__subtitle" data-translate-key="hero_subtitle">Odměňte se po tréninku nebo si jen tak přijďte vychutnat skvělou kávu, domácí dezerty a čerstvé snacky v příjemném prostředí.</p>
             </div>
         </section>
 
         <section class="menu-section">
             <div class="container">
-                <h2 class="section-title">Naše Nabídka</h2>
+                <h2 class="section-title" data-translate-key="menu_title">Naše Nabídka</h2>
                 <div class="menu-grid">
                     
                     <div class="menu-item">
                         <img src="img/kavarna/zskm.jpg" alt="Zeleninový salát s kuřecím masem" class="menu-item__image">
                         <div class="menu-item__content">
-                            <h3 class="menu-item__title">Zeleninový salát s kuřecím masem</h3>
-                            <p class="menu-item__description">S opečeným toastem. Lehká a zdravá volba.</p>
+                            <h3 class="menu-item__title" data-translate-key="item_salad_title">Zeleninový salát s kuřecím masem</h3>
+                            <p class="menu-item__description" data-translate-key="item_salad_desc">S opečeným toastem. Lehká a zdravá volba.</p>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <img src="img/kavarna/svss.jpg" alt="Sázené vejce se slaninou" class="menu-item__image">
                         <div class="menu-item__content">
-                            <h3 class="menu-item__title">Sázené vejce se slaninou</h3>
-                            <p class="menu-item__description">Perfektní start dne s opečeným toastem.</p>
+                            <h3 class="menu-item__title" data-translate-key="item_egg_title">Sázené vejce se slaninou</h3>
+                            <p class="menu-item__description" data-translate-key="item_egg_desc">Perfektní start dne s opečeným toastem.</p>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <img src="img/kavarna/gtsvac.jpg" alt="Grilovaný toast s vejcem a čedarem" class="menu-item__image">
                         <div class="menu-item__content">
-                            <h3 class="menu-item__title">Grilovaný toast s vejcem a čedarem</h3>
-                            <p class="menu-item__description">Klasika, která nikdy nezklame.</p>
+                            <h3 class="menu-item__title" data-translate-key="item_toast_egg_title">Grilovaný toast s vejcem a čedarem</h3>
+                            <p class="menu-item__description" data-translate-key="item_toast_egg_desc">Klasika, která nikdy nezklame.</p>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <img src="img/kavarna/gtssac.jpg" alt="Grilovaný toast se slaninou a čedarem" class="menu-item__image">
                         <div class="menu-item__content">
-                            <h3 class="menu-item__title">Grilovaný toast se slaninou a čedarem</h3>
-                            <p class="menu-item__description">Sytá a chutná svačina pro každého.</p>
+                            <h3 class="menu-item__title" data-translate-key="item_toast_bacon_title">Grilovaný toast se slaninou a čedarem</h3>
+                            <p class="menu-item__description" data-translate-key="item_toast_bacon_desc">Sytá a chutná svačina pro každého.</p>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <img src="img/kavarna/qskm.jpg" alt="Qurrito s kuřecím masem" class="menu-item__image">
                         <div class="menu-item__content">
-                            <h3 class="menu-item__title">Qurrito s kuřecím masem</h3>
-                            <p class="menu-item__description">Slaninou a čedarem v křupavé tortille.</p>
+                            <h3 class="menu-item__title" data-translate-key="item_qurrito_title">Qurrito s kuřecím masem</h3>
+                            <p class="menu-item__description" data-translate-key="item_qurrito_desc">Slaninou a čedarem v křupavé tortille.</p>
                         </div>
                     </div>
                     
                     <div class="menu-item">
                         <img src="img/kavarna/dezert.jpg" alt="Domácí dezert" class="menu-item__image">
                         <div class="menu-item__content">
-                            <h3 class="menu-item__title">Domácí zákusek - dezert</h3>
-                            <p class="menu-item__description">Sladká tečka, která vám zlepší náladu.</p>
+                            <h3 class="menu-item__title" data-translate-key="item_dessert_title">Domácí zákusek - dezert</h3>
+                            <p class="menu-item__description" data-translate-key="item_dessert_desc">Sladká tečka, která vám zlepší náladu.</p>
                         </div>
                     </div>
                     
                      <div class="menu-item">
                         <img src="img/kavarna/kava.jpg" alt="Teplé i studené nápoje" class="menu-item__image">
                         <div class="menu-item__content">
-                            <h3 class="menu-item__title">Teplé i studené nápoje</h3>
-                            <p class="menu-item__description">Široký výběr kávy, čajů a osvěžujících nápojů.</p>
+                            <h3 class="menu-item__title" data-translate-key="item_drinks_title">Teplé i studené nápoje</h3>
+                            <p class="menu-item__description" data-translate-key="item_drinks_desc">Široký výběr kávy, čajů a osvěžujících nápojů.</p>
                         </div>
                     </div>
                     
                     <div class="menu-item">
                         <img src="img/kavarna/pivo.jpg" alt="Točené pivo" class="menu-item__image">
                         <div class="menu-item__content">
-                            <h3 class="menu-item__title">Točené Pivo</h3>
-                            <p class="menu-item__description">Zasloužená odměna po náročném tréninku.</p>
+                            <h3 class="menu-item__title" data-translate-key="item_beer_title">Točené Pivo</h3>
+                            <p class="menu-item__description" data-translate-key="item_beer_desc">Zasloužená odměna po náročném tréninku.</p>
                         </div>
                     </div>
 
@@ -120,7 +132,7 @@
         <div class="footer__grid">
             <div class="footer__col">
                 <a href="index.html" class="navbar__logo"><img src="img/logo.png" alt="Trinity Club Logo"></a>
-                <p class="footer__col-text">Moderní fitness centrum v srdci Chebu, které vede Jiří Černý. Staňte se součástí naší komunity.</p>
+                <p class="footer__col-text" data-translate-key="footer_desc">Moderní fitness centrum v srdci Chebu, které vede Jiří Černý. Staňte se součástí naší komunity.</p>
                 <div class="footer__socials">
                     <a href="https://www.facebook.com/SKTrinityCheb" target="_blank" title="Facebook"><i class='bx bxl-facebook-square'></i></a>
                     <a href="https://www.instagram.com/sktrinity/" target="_blank" title="Instagram"><i class='bx bxl-instagram-alt'></i></a>
@@ -128,18 +140,18 @@
             </div>
 
             <div class="footer__col">
-                <h4 class="footer__col-title">Naše další projekty</h4>
+                <h4 class="footer__col-title" data-translate-key="footer_projects_title">Naše další projekty</h4>
                 <ul class="footer__list">
                     <li>
                         <strong><a href="http://www.sktrinity.cz/" target="_blank">SK TRINITY</a></strong>
-                        <ul class="footer__sublist">
+                        <ul class="footer__sublist" data-translate-key="footer_sk_trinity_desc">
                             <li>Děti 6-14 let</li>
                             <li>Plavání, Sportovka, Dance</li>
                         </ul>
                     </li>
                     <li>
                         <strong><a href="http://www.lccheb.cz/" target="_blank">LANOVÉ CENTRUM</a></strong>
-                        <ul class="footer__sublist">
+                        <ul class="footer__sublist" data-translate-key="footer_rope_center_desc">
                             <li>Lanové centrum na levém břehu Ohře</li>
                         </ul>
                     </li>
@@ -147,7 +159,7 @@
             </div>
 
             <div class="footer__col">
-                <h4 class="footer__col-title">Partneři</h4>
+                <h4 class="footer__col-title" data-translate-key="footer_partners_title">Partneři</h4>
                 <ul class="footer__list footer__list--partners">
                     <li>Iveta Top Salon</li>
                     <li>Tiskárna Skyepress Cheb</li>
@@ -157,13 +169,13 @@
             </div>
 
             <div class="footer__col">
-                <h4 class="footer__col-title">Kontakt</h4>
+                <h4 class="footer__col-title" data-translate-key="footer_contact_title">Kontakt</h4>
                 <ul class="footer__list">
                     <li><i class='bx bxs-map'></i><span>Evropská 1566/41, 350 02 Cheb</span></li>
                     <li><i class='bx bxs-phone-call'></i><a href="tel:+420777005222">777 005 222</a></li>
                     <li class="footer__hours">
                         <i class='bx bxs-time-five'></i>
-                        <span>
+                        <span data-translate-key="footer_hours">
                             Po-Pá: 8:00 - 20:00<br>
                             So-Ne: 9:00 - 12:00
                         </span>
@@ -172,8 +184,8 @@
             </div>
         </div>
         <div class="footer__bottom">
-            <p>© 2025 Trinity Club Cheb | Provozovatel: Jiří Černý, IČO: 75338631</p>
-            <p>Redesign by Max</p>
+            <p data-translate-key="footer_copyright">© 2025 Trinity Club Cheb | Provozovatel: Jiří Černý, IČO: 75338631</p>
+            <p data-translate-key="footer_redesign">Redesign by Max</p>
         </div>
     </div>
 </footer>

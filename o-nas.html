@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O nás - Náš Příběh - Trinity Club Redesign</title>
+    <title data-translate-key="page_title">O nás - Náš Příběh - Trinity Club Redesign</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,21 +13,33 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/o-nas.css">
 </head>
-<body class="about-us-page">
+<body class="about-us-page" data-page="onas">
 
     <header class="header">
         <nav class="navbar">
             <a href="index.html" class="navbar__logo"><img src="img/logo.png" alt="Trinity Club Logo"></a>
             <ul class="navbar__menu">
-                <li><a href="cviceni.html">Cvičení</a></li>
-                <li><a href="cenik.html">Ceník</a></li>
-                <li><a href="sluzby.html">Služby</a></li>
-                <li><a href="kavarna.html">Kavárna</a></li>
-                <li><a href="aktuality.html">Aktuality</a></li>
-                <li><a href="o-nas.html" class="active">O nás</a></li>
-                <li><a href="kontakty.html">Kontakty</a></li>
+                <li><a href="cviceni.html" data-translate-key="nav_cviceni">Cvičení</a></li>
+                <li><a href="cenik.html" data-translate-key="nav_cenik">Ceník</a></li>
+                <li><a href="sluzby.html" data-translate-key="nav_sluzby">Služby</a></li>
+                <li><a href="kavarna.html" data-translate-key="nav_kavarna">Kavárna</a></li>
+                <li><a href="aktuality.html" data-translate-key="nav_aktuality">Aktuality</a></li>
+                <li><a href="o-nas.html" class="active" data-translate-key="nav_onas">O nás</a></li>
+                <li><a href="kontakty.html" data-translate-key="nav_kontakty">Kontakty</a></li>
             </ul>
-            <a href="http://rezervace.trinityclub.cz/" target="_blank" class="navbar__cta-button">ROZVRH</a>
+             <div class="language-switcher">
+    <button class="language-switcher__button" id="lang-switcher-button">
+        <img src="https://flagcdn.com/w40/cz.png" alt="cs" id="current-lang-flag">
+        <span class="language-switcher__code" id="current-lang-code">CS</span>
+    </button>
+    <ul class="language-switcher__dropdown" id="lang-switcher-dropdown">
+        <li><a href="#" class="lang-btn" data-lang="cs"><img src="https://flagcdn.com/w40/cz.png" alt="cs"> <span>Čeština</span></a></li>
+        <li><a href="#" class="lang-btn" data-lang="ru"><img src="https://flagcdn.com/w40/ru.png" alt="ru"> <span>Русский</span></a></li>
+        <li><a href="#" class="lang-btn" data-lang="en"><img src="https://flagcdn.com/w40/gb.png" alt="en"> <span>English</span></a></li>
+        <li><a href="#" class="lang-btn" data-lang="de"><img src="https://flagcdn.com/w40/de.png" alt="de"> <span>Deutsch</span></a></li>
+    </ul>
+</div>
+            <a href="http://rezervace.trinityclub.cz/" target="_blank" class="navbar__cta-button" data-translate-key="nav_rozvrh">ROZVRH</a>
             <button class="navbar__menu-toggle" id="menu-toggle"><i class='bx bx-menu'></i></button>
         </nav>
     </header>
@@ -35,8 +47,8 @@
     <main>
         <section class="about-hero">
             <div class="container">
-                <h1 class="about-hero__title">Náš Příběh</h1>
-                <p class="about-hero__subtitle">Očima zakladatele klubu, Jirky Černého.</p>
+                <h1 class="about-hero__title" data-translate-key="hero_title">Náš Příběh</h1>
+                <p class="about-hero__subtitle" data-translate-key="hero_subtitle">Očima zakladatele klubu, Jirky Černého.</p>
             </div>
         </section>
 
@@ -47,8 +59,8 @@
                     <div class="timeline-item">
                         <div class="timeline-icon"><i class='bx bx-play-circle'></i></div>
                         <div class="timeline-content">
-                            <h2>Jak to všechno začalo</h2>
-                            <p>Všechno bylo vlastně dílem náhody. Pracovní povinnosti mne zavedly do Brna, kde jsem se poprvé setkal se Spinningem. Na svoji první lekci jsem šel s Hankou Buchtovou. A právě ta první hodina rozhodla. Nakonec jsem se rozhodl, že přivezu Spinning na západ republiky, do Chebu.</p>
+                            <h2 data-translate-key="timeline_1_title">Jak to všechno začalo</h2>
+                            <p data-translate-key="timeline_1_text">Všechno bylo vlastně dílem náhody. Pracovní povinnosti mne zavedly do Brna, kde jsem se poprvé setkal se Spinningem. Na svoji první lekci jsem šel s Hankou Buchtovou. A právě ta první hodina rozhodla. Nakonec jsem se rozhodl, že přivezu Spinning na západ republiky, do Chebu.</p>
                         </div>
                         <div class="timeline-image-container">
                             <img src="img/jiri_cerny.jpg" alt="Jiří a Hanka" class="timeline-image">
@@ -61,16 +73,16 @@
                             <img src="img/123.jpg" alt="Jiří s kolegy v Jařest" class="timeline-image">
                         </div>
                         <div class="timeline-content">
-                            <h2>Sportovní klub Jařest (Kalora)</h2>
-                            <p>Po dohodě s provozovatelem místní posilovny padlo rozhodnutí právě na Sportovní klub Jařest. 2. prosince 2002 se kola začala točit. Bohužel díky okolnostem a přístupu majitelů, jsme se po čtyřech měsících museli z těchto prostor stěhovat.</p>
+                            <h2 data-translate-key="timeline_2_title">Sportovní klub Jařest (Kalora)</h2>
+                            <p data-translate-key="timeline_2_text">Po dohodě s provozovatelem místní posilovny padlo rozhodnutí právě na Sportovní klub Jařest. 2. prosince 2002 se kola začala točit. Bohužel díky okolnostem a přístupu majitelů, jsme se po čtyřech měsících museli z těchto prostor stěhovat.</p>
                         </div>
                     </div>
                     
                     <div class="timeline-item">
                         <div class="timeline-icon"><i class='bx bx-child'></i></div>
                         <div class="timeline-content">
-                            <h2>Dům dětí a mládeže Cheb</h2>
-                            <p>Díky vedení DDM jsme mohli bez omezení fungovat dál. I v tak provizorních podmínkách proběhl právě v tomto prostředí první kurz pro snížení nadváhy STOB OBEZITĚ. Ani tady jsme však nemohli zůstal delší dobu.</p>
+                            <h2 data-translate-key="timeline_3_title">Dům dětí a mládeže Cheb</h2>
+                            <p data-translate-key="timeline_3_text">Díky vedení DDM jsme mohli bez omezení fungovat dál. I v tak provizorních podmínkách proběhl právě v tomto prostředí první kurz pro snížení nadváhy STOB OBEZITĚ. Ani tady jsme však nemohli zůstal delší dobu.</p>
                         </div>
                         <div class="timeline-image-container">
                              <img src="img/ddm.jpeg" alt="Dům dětí a mládeže Cheb" class="timeline-image">
@@ -83,16 +95,16 @@
                             <img src="img/fotka123.jpg" alt="Jiří s kolegy a dětmi v KASS" class="timeline-image">
                         </div>
                         <div class="timeline-content">
-                            <h2>KASS (Kulturní středisko)</h2>
-                            <p>Díky vedení Kulturního střediska v Chebu, se našla místnost pro naši další činnost. Sice zde chybělo potřebné zázemí ale podle stálých klientů to prý bylo nejlepší místo, kde spinning dosud byl.</p>
+                            <h2 data-translate-key="timeline_4_title">KASS (Kulturní středisko)</h2>
+                            <p data-translate-key="timeline_4_text">Díky vedení Kulturního střediska v Chebu, se našla místnost pro naši další činnost. Sice zde chybělo potřebné zázemí ale podle stálých klientů to prý bylo nejlepší místo, kde spinning dosud byl.</p>
                         </div>
                     </div>
                     
                     <div class="timeline-item">
                         <div class="timeline-icon"><i class='bx bx-key'></i></div>
                         <div class="timeline-content">
-                            <h2>Activ centrum Cheb, Valdštejnova 20</h2>
-                            <p>Byl to sice tvrdý oříšek ale za pomoci všech, co měli spinning v oblibě, se vše dalo do pohybu. O Vánocích roku 2003 jsme spustili provoz ve Valdštejnově ulici.</p>
+                            <h2 data-translate-key="timeline_5_title">Activ centrum Cheb, Valdštejnova 20</h2>
+                            <p data-translate-key="timeline_5_text">Byl to sice tvrdý oříšek ale za pomoci všech, co měli spinning v oblibě, se vše dalo do pohybu. O Vánocích roku 2003 jsme spustili provoz ve Valdštejnově ulici.</p>
                         </div>
                          <div class="timeline-image-container">
                             <img src="img/okak.jpg" alt="Tým Trinity Club v Activ centru" class="timeline-image">
@@ -105,8 +117,8 @@
                             <img src="img/evropska.jpg" alt="Trinity Club Cheb - Evropská 41" class="timeline-image">
                         </div>
                         <div class="timeline-content">
-                            <h2>Trinity club Cheb, Evropská 41</h2>
-                            <p>V roce 2008 jsme se přihlásili do výběrového řízení na prostory bývalé prodejny Baťa. Po krátké době zastupitelstvo města Cheb rozhodlo v náš prospěch a začalo se s rekonstrukcí. V březnu, roku 2009 se otevřelo nové sportovně relaxační centrum s novým názvem Trinity club Cheb.</p>
+                            <h2 data-translate-key="timeline_6_title">Trinity club Cheb, Evropská 41</h2>
+                            <p data-translate-key="timeline_6_text">V roce 2008 jsme se přihlásili do výběrového řízení na prostory bývalé prodejny Baťa. Po krátké době zastupitelstvo města Cheb rozhodlo v náš prospěch a začalo se s rekonstrukcí. V březnu, roku 2009 se otevřelo nové sportovně relaxační centrum s novým názvem Trinity club Cheb.</p>
                         </div>
                     </div>
 
@@ -120,7 +132,7 @@
         <div class="footer__grid">
             <div class="footer__col">
                 <a href="index.html" class="navbar__logo"><img src="img/logo.png" alt="Trinity Club Logo"></a>
-                <p class="footer__col-text">Moderní fitness centrum v srdci Chebu, které vede Jiří Černý. Staňte se součástí naší komunity.</p>
+                <p class="footer__col-text" data-translate-key="footer_desc">Moderní fitness centrum v srdci Chebu, které vede Jiří Černý. Staňte se součástí naší komunity.</p>
                 <div class="footer__socials">
                     <a href="https://www.facebook.com/SKTrinityCheb" target="_blank" title="Facebook"><i class='bx bxl-facebook-square'></i></a>
                     <a href="https://www.instagram.com/sktrinity/" target="_blank" title="Instagram"><i class='bx bxl-instagram-alt'></i></a>
@@ -128,18 +140,18 @@
             </div>
 
             <div class="footer__col">
-                <h4 class="footer__col-title">Naše další projekty</h4>
+                <h4 class="footer__col-title" data-translate-key="footer_projects_title">Naše další projekty</h4>
                 <ul class="footer__list">
                     <li>
                         <strong><a href="http://www.sktrinity.cz/" target="_blank">SK TRINITY</a></strong>
-                        <ul class="footer__sublist">
+                        <ul class="footer__sublist" data-translate-key="footer_sk_trinity_desc">
                             <li>Děti 6-14 let</li>
                             <li>Plavání, Sportovka, Dance</li>
                         </ul>
                     </li>
                     <li>
                         <strong><a href="http://www.lccheb.cz/" target="_blank">LANOVÉ CENTRUM</a></strong>
-                        <ul class="footer__sublist">
+                        <ul class="footer__sublist" data-translate-key="footer_rope_center_desc">
                             <li>Lanové centrum na levém břehu Ohře</li>
                         </ul>
                     </li>
@@ -147,7 +159,7 @@
             </div>
 
             <div class="footer__col">
-                <h4 class="footer__col-title">Partneři</h4>
+                <h4 class="footer__col-title" data-translate-key="footer_partners_title">Partneři</h4>
                 <ul class="footer__list footer__list--partners">
                     <li>Iveta Top Salon</li>
                     <li>Tiskárna Skyepress Cheb</li>
@@ -157,13 +169,13 @@
             </div>
 
             <div class="footer__col">
-                <h4 class="footer__col-title">Kontakt</h4>
+                <h4 class="footer__col-title" data-translate-key="footer_contact_title">Kontakt</h4>
                 <ul class="footer__list">
                     <li><i class='bx bxs-map'></i><span>Evropská 1566/41, 350 02 Cheb</span></li>
                     <li><i class='bx bxs-phone-call'></i><a href="tel:+420777005222">777 005 222</a></li>
                     <li class="footer__hours">
                         <i class='bx bxs-time-five'></i>
-                        <span>
+                        <span data-translate-key="footer_hours">
                             Po-Pá: 8:00 - 20:00<br>
                             So-Ne: 9:00 - 12:00
                         </span>
@@ -172,8 +184,8 @@
             </div>
         </div>
         <div class="footer__bottom">
-            <p>© 2025 Trinity Club Cheb | Provozovatel: Jiří Černý, IČO: 75338631</p>
-            <p>Redesign by Max</p>
+            <p data-translate-key="footer_copyright">© 2025 Trinity Club Cheb | Provozovatel: Jiří Černý, IČO: 75338631</p>
+            <p data-translate-key="footer_redesign">Redesign by Max</p>
         </div>
     </div>
 </footer>

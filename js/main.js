@@ -3,9 +3,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // --- Логика для мобильного меню ---
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.querySelector('.navbar__menu');
-    menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('is-active');
-    });
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('is-active');
+        });
+    }
 
     // --- Логика для Hero Slider ---
     if (document.querySelector('.hero-slider')) {
@@ -24,29 +26,62 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // --- Логика для переключения языков ---
+    const langSwitcherButton = document.getElementById('lang-switcher-button');
+    const langSwitcherDropdown = document.getElementById('lang-switcher-dropdown');
+    const currentLangFlag = document.getElementById('current-lang-flag');
+    const currentLangCode = document.getElementById('current-lang-code');
     let translations = {};
+
+    const languages = {
+        cs: { name: 'Čeština', flag: 'https://flagcdn.com/w40/cz.png', code: 'CS' },
+        ru: { name: 'Русский', flag: 'https://flagcdn.com/w40/ru.png', code: 'RU' },
+        en: { name: 'English', flag: 'https://flagcdn.com/w40/gb.png', code: 'EN' },
+        de: { name: 'Deutsch', flag: 'https://flagcdn.com/w40/de.png', code: 'DE' }
+    };
+
+    // Показать/скрыть выпадающий список
+    if (langSwitcherButton && langSwitcherDropdown) {
+        langSwitcherButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langSwitcherDropdown.classList.toggle('is-active');
+        });
+
+        // Закрыть список при клике вне его
+        document.addEventListener('click', () => {
+            if (langSwitcherDropdown.classList.contains('is-active')) {
+                langSwitcherDropdown.classList.remove('is-active');
+            }
+        });
+    }
+
+    // Функция обновляет текущий флаг и код языка
+    const updateCurrentLanguageDisplay = (lang) => {
+        if (languages[lang] && currentLangFlag && currentLangCode) {
+            currentLangFlag.src = languages[lang].flag;
+            currentLangFlag.alt = lang;
+            currentLangCode.textContent = languages[lang].code;
+        }
+    };
 
     // Функция применяет переводы к странице
     const translatePage = () => {
         document.querySelectorAll('[data-translate-key]').forEach(el => {
             const key = el.getAttribute('data-translate-key');
-            const page = document.body.className.split('-')[0] || 'index';
+            const page = document.body.getAttribute('data-page') || 'index';
             
             let translation = '';
             
-            // Ищем ключ сначала в секции для конкретной страницы
             if (translations[page] && translations[page][key]) {
                 translation = translations[page][key];
-            } 
-            // Если не нашли, ищем в общих элементах (common)
-            else if (translations.common && translations.common[key]) {
+            } else if (translations.common && translations.common[key]) {
                 translation = translations.common[key];
             }
 
             if (translation) {
-                // Если это title страницы
                 if (el.tagName === 'TITLE') {
                     el.innerText = translation;
+                } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    el.placeholder = translation;
                 } else {
                     el.innerHTML = translation;
                 }
@@ -66,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
             translatePage();
             document.documentElement.lang = lang;
             localStorage.setItem('language', lang);
+            updateCurrentLanguageDisplay(lang);
         } catch (error) {
             console.error('Error loading or parsing translation file:', error);
         }
@@ -73,9 +109,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Навешиваем обработчики на кнопки смены языка
     document.querySelectorAll('.lang-btn').forEach(button => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
             const lang = button.getAttribute('data-lang');
             loadLanguage(lang);
+            // Закрываем список после выбора
+            if (langSwitcherDropdown) {
+                langSwitcherDropdown.classList.remove('is-active');
+            }
         });
     });
 

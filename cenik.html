@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ceník a Členství - Trinity Club Redesign</title>
+    <title data-translate-key="page_title">Ceník a Členství - Trinity Club Redesign</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,21 +13,33 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/price.css">
 </head>
-<body>
+<body data-page="cenik">
 
     <header class="header">
         <nav class="navbar">
             <a href="index.html" class="navbar__logo"><img src="img/logo.png" alt="Trinity Club Logo"></a>
             <ul class="navbar__menu">
-    <li><a href="cviceni.html">Cvičení</a></li>
-    <li><a href="cenik.html" class="active">Ceník</a></li>
-    <li><a href="sluzby.html">Služby</a></li>
-    <li><a href="kavarna.html">Kavárna</a></li>
-    <li><a href="aktuality.html">Aktuality</a></li>
-    <li><a href="o-nas.html">O nás</a></li>
-    <li><a href="kontakty.html">Kontakty</a></li>
+                <li><a href="cviceni.html" data-translate-key="nav_cviceni">Cvičení</a></li>
+                <li><a href="cenik.html" class="active" data-translate-key="nav_cenik">Ceník</a></li>
+                <li><a href="sluzby.html" data-translate-key="nav_sluzby">Služby</a></li>
+                <li><a href="kavarna.html" data-translate-key="nav_kavarna">Kavárna</a></li>
+                <li><a href="aktuality.html" data-translate-key="nav_aktuality">Aktuality</a></li>
+                <li><a href="o-nas.html" data-translate-key="nav_onas">O nás</a></li>
+                <li><a href="kontakty.html" data-translate-key="nav_kontakty">Kontakty</a></li>
             </ul>
-            <a href="http://rezervace.trinityclub.cz/" target="_blank" class="navbar__cta-button">ROZVRH</a>
+            <div class="language-switcher">
+    <button class="language-switcher__button" id="lang-switcher-button">
+        <img src="https://flagcdn.com/w40/cz.png" alt="cs" id="current-lang-flag">
+        <span class="language-switcher__code" id="current-lang-code">CS</span>
+    </button>
+    <ul class="language-switcher__dropdown" id="lang-switcher-dropdown">
+        <li><a href="#" class="lang-btn" data-lang="cs"><img src="https://flagcdn.com/w40/cz.png" alt="cs"> <span>Čeština</span></a></li>
+        <li><a href="#" class="lang-btn" data-lang="ru"><img src="https://flagcdn.com/w40/ru.png" alt="ru"> <span>Русский</span></a></li>
+        <li><a href="#" class="lang-btn" data-lang="en"><img src="https://flagcdn.com/w40/gb.png" alt="en"> <span>English</span></a></li>
+        <li><a href="#" class="lang-btn" data-lang="de"><img src="https://flagcdn.com/w40/de.png" alt="de"> <span>Deutsch</span></a></li>
+    </ul>
+</div>
+            <a href="http://rezervace.trinityclub.cz/" target="_blank" class="navbar__cta-button" data-translate-key="nav_rozvrh">ROZVRH</a>
             <button class="navbar__menu-toggle" id="menu-toggle"><i class='bx bx-menu'></i></button>
         </nav>
     </header>
@@ -36,51 +48,51 @@
         <section class="pricing-page">
             <div class="container">
                 <div class="pricing-intro">
-                    <h1 class="pricing-intro__title">Klubové členství a ceník</h1>
-                    <p class="pricing-intro__subtitle">Pohyb má smysl, proto jsme vznikli.</p>
-                    <p>Nad důvody proč k nám nechodit nemusíš moc dlouho přemýšlet – „Nemám pevnou vůli”, „Vypadám hrozně”, ”Chci chodit cvičit jen občas”, ”Vůbec nemám na cvičení čas”, ”Nemám kam dát děti”, ”Je to drahý”, ”Stydím se”. S tím vším ti můžeme pomoci.</p>
+                    <h1 class="pricing-intro__title" data-translate-key="hero_title">Klubové členství a ceník</h1>
+                    <p class="pricing-intro__subtitle" data-translate-key="hero_subtitle">Pohyb má smysl, proto jsme vznikli.</p>
+                    <p data-translate-key="hero_text">Nad důvody proč k nám nechodit nemusíš moc dlouho přemýšlet – „Nemám pevnou vůli”, „Vypadám hrozně”, ”Chci chodit cvičit jen občas”, ”Vůbec nemám na cvičení čas”, ”Nemám kam dát děti”, ”Je to drahý”, ”Stydím se”. S tím vším ti můžeme pomoci.</p>
                 </div>
 
                 <div class="pricing-content-grid">
                     <div class="pricing-content__text">
-                        <h2>Proč má smysl přijít?</h2>
-                        <p>Pokud chceš udělat něco pro sebe, změnit životní styl, zlepšit kondici, zdraví, sebevědomí, psychiku, postavu, jsme tu právě pro tebe. Naším hlavním cílem je vždy dosáhnout cílů klienta.</p>
-                        <p>Nemusíš se obávat, že ti nikdo neporadí v začátcích. Vyzkoušej nové druhy cvičení jako je slim box, pilates, jóga nebo cvičení na míčích. Vždy ti bude k dispozici proškolený personál. Poradíme ti s jídelníčkem a sestavíme ti cvičební plán.</p>
-                        <p>Budeš pokračovat v kouření, přejídání, v životě bez pohybu a ve stresu, nebo investuješ trochu času do svého vlastního zdraví? Pomůžeme ti obohatit tvůj život. Je jen na tobě, kdy začneš. Neboj se udělat první krok.</p>
+                        <h2 data-translate-key="why_title">Proč má smysl přijít?</h2>
+                        <p data-translate-key="why_text_1">Pokud chceš udělat něco pro sebe, změnit životní styl, zlepšit kondici, zdraví, sebevědomí, psychiku, postavu, jsme tu právě pro tebe. Naším hlavním cílem je vždy dosáhnout cílů klienta.</p>
+                        <p data-translate-key="why_text_2">Nemusíš se obávat, že ti nikdo neporadí v začátcích. Vyzkoušej nové druhy cvičení jako je slim box, pilates, jóga nebo cvičení na míčích. Vždy ti bude k dispozici proškolený personál. Poradíme ti s jídelníčkem a sestavíme ti cvičební plán.</p>
+                        <p data-translate-key="why_text_3">Budeš pokračovat v kouření, přejídání, v životě bez pohybu a ve stresu, nebo investuješ trochu času do svého vlastního zdraví? Pomůžeme ti obohatit tvůj život. Je jen na tobě, kdy začneš. Neboj se udělat první krok.</p>
                     </div>
 
                     <div class="pricing-content__list">
-                        <h2>CENÍK <span class="pricing-date">platný od 1.12.2022</span></h2>
-                        <p class="pricing-note">V ceně je vždy vstup bez časového omezení. Klient má vždy možnost využít všech nabízených služeb sportovního centra.</p>
+                        <h2 data-translate-key="pricing_title">CENÍK <span class="pricing-date" data-translate-key="pricing_date">platný od 1.12.2022</span></h2>
+                        <p class="pricing-note" data-translate-key="pricing_note">V ceně je vždy vstup bez časového omezení. Klient má vždy možnost využít všech nabízených služeb sportovního centra.</p>
                         
                         <div class="price-category">
-                            <div class="price-item"><span>Jednorázový vstup</span> <span>150,- Kč</span></div>
-                            <div class="price-item"><span>Jednorázový vstup student</span> <span>100,- Kč</span></div>
-                            <div class="price-item"><span>Jedna osoba - měsíc (bez členství)</span> <span>1100,- Kč</span></div>
+                            <div class="price-item"><span data-translate-key="price_single">Jednorázový vstup</span> <span>150,- Kč</span></div>
+                            <div class="price-item"><span data-translate-key="price_single_student">Jednorázový vstup student</span> <span>100,- Kč</span></div>
+                            <div class="price-item"><span data-translate-key="price_monthly_no_membership">Jedna osoba - měsíc (bez členství)</span> <span>1100,- Kč</span></div>
                         </div>
 
                         <div class="price-category">
-                            <h3>Klubové Členství</h3>
-                            <div class="price-item"><span>Členství na 1/2 roku</span> <span>990,- Kč/měsíc</span></div>
-                            <div class="price-item"><span>Členství na 1 rok</span> <span>890,- Kč/měsíc</span></div>
-                            <div class="price-item"><span>Skupina 5+ osob (1 rok)</span> <span>790,- Kč/os./měs.</span></div>
-                            <div class="price-item"><span>Senioři (1 rok)</span> <span>790,- Kč/měsíc</span></div>
-                            <div class="price-item"><span>Studenti (1 rok)</span> <span>600,- Kč/měsíc</span></div>
+                            <h3 data-translate-key="membership_title">Klubové Členství</h3>
+                            <div class="price-item"><span data-translate-key="membership_half_year">Členství na 1/2 roku</span> <span>990,- Kč/měsíc</span></div>
+                            <div class="price-item"><span data-translate-key="membership_year">Členství na 1 rok</span> <span>890,- Kč/měsíc</span></div>
+                            <div class="price-item"><span data-translate-key="membership_group">Skupina 5+ osob (1 rok)</span> <span>790,- Kč/os./měs.</span></div>
+                            <div class="price-item"><span data-translate-key="membership_senior">Senioři (1 rok)</span> <span>790,- Kč/měsíc</span></div>
+                            <div class="price-item"><span data-translate-key="membership_student">Studenti (1 rok)</span> <span>600,- Kč/měsíc</span></div>
                         </div>
 
                          <div class="price-category">
-                            <h3>Doplňkové Služby</h3>
-                            <div class="price-item"><span>Trenér (1 hodina)</span> <span>300,- Kč</span></div>
-                            <div class="price-item price-item--note"><span>(Pro členy klubu)</span> <span>250,- Kč</span></div>
+                            <h3 data-translate-key="extra_services_title">Doplňkové Služby</h3>
+                            <div class="price-item"><span data-translate-key="extra_trainer">Trenér (1 hodina)</span> <span>300,- Kč</span></div>
+                            <div class="price-item price-item--note"><span data-translate-key="extra_trainer_member">(Pro členy klubu)</span> <span>250,- Kč</span></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="pricing-outro">
-                    <h2>O klubovém členství</h2>
-                    <p>Trinity club je založen na klubovém členství. Tento systém funguje ve sportovních centrech, které nabízí širokou škálu služeb pod jednou střechou a nabízí všem členům stabilní úroveň služeb na vysoké profesionální úrovni. Zajišťuje také kvalitní vybavení a profesionální personál, který ti je kdykoliv k ruce.</p>
-                    <p>Tento způsob placení služeb je pro mnohé jistě něčím neznámým. Vstupem do klubu uděláš ten nejlepší krok k vlastní spokojenosti. Měsíční platby tě budou více motivovat k pravidelnému cvičení. Jen tak zajistíš, že budeš vypadat lépe, budeš se lépe cítit a vylepšíš si zdraví i psychiku a v neposlední řadě i náladu.</p>
-                    <p>Klubové členství není povinné. U nás je možné hradit také za jednorázové vstupy. To však pro klienty vyjde vždy dráž, než klubové členství. Zvláště pak, chce li člověk cvičit pravidelně.</p>
+                    <h2 data-translate-key="about_membership_title">O klubovém členství</h2>
+                    <p data-translate-key="about_membership_text_1">Trinity club je založen na klubovém členství. Tento systém funguje ve sportovních centrech, které nabízí širokou škálu služeb pod jednou střechou a nabízí všem členům stabilní úroveň služeb na vysoké profesionální úrovni. Zajišťuje také kvalitní vybavení a profesionální personál, který ti je kdykoliv k ruce.</p>
+                    <p data-translate-key="about_membership_text_2">Tento způsob placení služeb je pro mnohé jistě něčím neznámým. Vstupem do klubu uděláš ten nejlepší krok k vlastní spokojenosti. Měsíční platby tě budou více motivovat k pravidelnému cvičení. Jen tak zajistíš, že budeš vypadat lépe, budeš se lépe cítit a vylepšíš si zdraví i psychiku a v neposlední řadě i náladu.</p>
+                    <p data-translate-key="about_membership_text_3">Klubové členství není povinné. U nás je možné hradit také za jednorázové vstupy. To však pro klienty vyjde vždy dráž, než klubové členství. Zvláště pak, chce li člověk cvičit pravidelně.</p>
                 </div>
 
             </div>
@@ -92,7 +104,7 @@
         <div class="footer__grid">
             <div class="footer__col">
                 <a href="index.html" class="navbar__logo"><img src="img/logo.png" alt="Trinity Club Logo"></a>
-                <p class="footer__col-text">Moderní fitness centrum v srdci Chebu, které vede Jiří Černý. Staňte se součástí naší komunity.</p>
+                <p class="footer__col-text" data-translate-key="footer_desc">Moderní fitness centrum v srdci Chebu, které vede Jiří Černý. Staňte se součástí naší komunity.</p>
                 <div class="footer__socials">
                     <a href="https://www.facebook.com/SKTrinityCheb" target="_blank" title="Facebook"><i class='bx bxl-facebook-square'></i></a>
                     <a href="https://www.instagram.com/sktrinity/" target="_blank" title="Instagram"><i class='bx bxl-instagram-alt'></i></a>
@@ -100,18 +112,18 @@
             </div>
 
             <div class="footer__col">
-                <h4 class="footer__col-title">Naše další projekty</h4>
+                <h4 class="footer__col-title" data-translate-key="footer_projects_title">Naše další projekty</h4>
                 <ul class="footer__list">
                     <li>
                         <strong><a href="http://www.sktrinity.cz/" target="_blank">SK TRINITY</a></strong>
-                        <ul class="footer__sublist">
+                        <ul class="footer__sublist" data-translate-key="footer_sk_trinity_desc">
                             <li>Děti 6-14 let</li>
                             <li>Plavání, Sportovka, Dance</li>
                         </ul>
                     </li>
                     <li>
                         <strong><a href="http://www.lccheb.cz/" target="_blank">LANOVÉ CENTRUM</a></strong>
-                        <ul class="footer__sublist">
+                        <ul class="footer__sublist" data-translate-key="footer_rope_center_desc">
                             <li>Lanové centrum na levém břehu Ohře</li>
                         </ul>
                     </li>
@@ -119,7 +131,7 @@
             </div>
 
             <div class="footer__col">
-                <h4 class="footer__col-title">Partneři</h4>
+                <h4 class="footer__col-title" data-translate-key="footer_partners_title">Partneři</h4>
                 <ul class="footer__list footer__list--partners">
                     <li>Iveta Top Salon</li>
                     <li>Tiskárna Skyepress Cheb</li>
@@ -129,13 +141,13 @@
             </div>
 
             <div class="footer__col">
-                <h4 class="footer__col-title">Kontakt</h4>
+                <h4 class="footer__col-title" data-translate-key="footer_contact_title">Kontakt</h4>
                 <ul class="footer__list">
                     <li><i class='bx bxs-map'></i><span>Evropská 1566/41, 350 02 Cheb</span></li>
                     <li><i class='bx bxs-phone-call'></i><a href="tel:+420777005222">777 005 222</a></li>
                     <li class="footer__hours">
                         <i class='bx bxs-time-five'></i>
-                        <span>
+                        <span data-translate-key="footer_hours">
                             Po-Pá: 8:00 - 20:00<br>
                             So-Ne: 9:00 - 12:00
                         </span>
@@ -144,8 +156,8 @@
             </div>
         </div>
         <div class="footer__bottom">
-            <p>© 2025 Trinity Club Cheb | Provozovatel: Jiří Černý, IČO: 75338631</p>
-            <p>Redesign by Max</p>
+            <p data-translate-key="footer_copyright">© 2025 Trinity Club Cheb | Provozovatel: Jiří Černý, IČO: 75338631</p>
+            <p data-translate-key="footer_redesign">Redesign by Max</p>
         </div>
     </div>
 </footer>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Služby a Zázemí - Trinity Club Redesign</title>
+    <title data-translate-key="page_title">Služby a Zázemí - Trinity Club Redesign</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,21 +13,33 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sluzby.css">
 </head>
-<body class="services-page">
+<body class="services-page" data-page="sluzby">
 
     <header class="header">
         <nav class="navbar">
             <a href="index.html" class="navbar__logo"><img src="img/logo.png" alt="Trinity Club Logo"></a>
             <ul class="navbar__menu">
-                <li><a href="cviceni.html">Cvičení</a></li>
-                <li><a href="cenik.html">Ceník</a></li>
-                <li><a href="sluzby.html" class="active">Služby</a></li>
-                <li><a href="kavarna.html">Kavárna</a></li>
-                <li><a href="aktuality.html">Aktuality</a></li>
-                <li><a href="o-nas.html">O nás</a></li>
-                <li><a href="kontakty.html">Kontakty</a></li>
+                <li><a href="cviceni.html" data-translate-key="nav_cviceni">Cvičení</a></li>
+                <li><a href="cenik.html" data-translate-key="nav_cenik">Ceník</a></li>
+                <li><a href="sluzby.html" class="active" data-translate-key="nav_sluzby">Služby</a></li>
+                <li><a href="kavarna.html" data-translate-key="nav_kavarna">Kavárna</a></li>
+                <li><a href="aktuality.html" data-translate-key="nav_aktuality">Aktuality</a></li>
+                <li><a href="o-nas.html" data-translate-key="nav_onas">O nás</a></li>
+                <li><a href="kontakty.html" data-translate-key="nav_kontakty">Kontakty</a></li>
             </ul>
-            <a href="http://rezervace.trinityclub.cz/" target="_blank" class="navbar__cta-button">ROZVRH</a>
+             <div class="language-switcher">
+    <button class="language-switcher__button" id="lang-switcher-button">
+        <img src="https://flagcdn.com/w40/cz.png" alt="cs" id="current-lang-flag">
+        <span class="language-switcher__code" id="current-lang-code">CS</span>
+    </button>
+    <ul class="language-switcher__dropdown" id="lang-switcher-dropdown">
+        <li><a href="#" class="lang-btn" data-lang="cs"><img src="https://flagcdn.com/w40/cz.png" alt="cs"> <span>Čeština</span></a></li>
+        <li><a href="#" class="lang-btn" data-lang="ru"><img src="https://flagcdn.com/w40/ru.png" alt="ru"> <span>Русский</span></a></li>
+        <li><a href="#" class="lang-btn" data-lang="en"><img src="https://flagcdn.com/w40/gb.png" alt="en"> <span>English</span></a></li>
+        <li><a href="#" class="lang-btn" data-lang="de"><img src="https://flagcdn.com/w40/de.png" alt="de"> <span>Deutsch</span></a></li>
+    </ul>
+</div>
+            <a href="http://rezervace.trinityclub.cz/" target="_blank" class="navbar__cta-button" data-translate-key="nav_rozvrh">ROZVRH</a>
             <button class="navbar__menu-toggle" id="menu-toggle"><i class='bx bx-menu'></i></button>
         </nav>
     </header>
@@ -35,44 +47,44 @@
     <main>
         <section class="services-hero">
             <div class="container">
-                <h1 class="services-hero__title">Naše Služby a Zázemí</h1>
-                <p class="services-hero__subtitle">V Trinity Clubu nejde jen o cvičení. Nabízíme komplexní zázemí pro váš komfort, relaxaci a dosažení nejlepších výsledků.</p>
+                <h1 class="services-hero__title" data-translate-key="hero_title">Naše Služby a Zázemí</h1>
+                <p class="services-hero__subtitle" data-translate-key="hero_subtitle">V Trinity Clubu nejde jen o cvičení. Nabízíme komplexní zázemí pro váš komfort, relaxaci a dosažení nejlepších výsledků.</p>
             </div>
         </section>
 
         <section class="features-section">
             <div class="container">
-                <h2 class="section-title">Podívej se, co na tebe čeká</h2>
+                <h2 class="section-title" data-translate-key="features_title">Podívej se, co na tebe čeká</h2>
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-card__icon"><i class='bx bx-user-check'></i></div>
-                        <h3 class="feature-card__title">Zkušení Instruktoři</h3>
-                        <p class="feature-card__text">Náš tým profesionálních a přátelských instruktorů je tu vždy pro tebe, aby ti poradil, sestavil tréninkový plán a pomohl na tvé cestě.</p>
+                        <h3 class="feature-card__title" data-translate-key="feature_1_title">Zkušení Instruktoři</h3>
+                        <p class="feature-card__text" data-translate-key="feature_1_text">Náš tým profesionálních a přátelských instruktorů je tu vždy pro tebe, aby ti poradil, sestavil tréninkový plán a pomohl na tvé cestě.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-card__icon"><i class='bx bx-shape-square'></i></div>
-                        <h3 class="feature-card__title">600 m² pro Cvičení</h3>
-                        <p class="feature-card__text">Čekají na tebe čtyři plně klimatizované tělocvičny a sály s moderním vybavením pro všechny druhy tréninku, od kardia po silové zóny.</p>
+                        <h3 class="feature-card__title" data-translate-key="feature_2_title">600 m² pro Cvičení</h3>
+                        <p class="feature-card__text" data-translate-key="feature_2_text">Čekají na tebe čtyři plně klimatizované tělocvičny a sály s moderním vybavením pro všechny druhy tréninku, od kardia po silové zóny.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-card__icon"><i class='bx bx-coffee-togo'></i></div>
-                        <h3 class="feature-card__title">Sportovní Bar & Kavárna</h3>
-                        <p class="feature-card__text">Doplň energii po tréninku nebo si jen v klidu vychutnej kávu. Nabízíme široký sortiment nápojů a zdravých snacků pro regeneraci.</p>
+                        <h3 class="feature-card__title" data-translate-key="feature_3_title">Sportovní Bar & Kavárna</h3>
+                        <p class="feature-card__text" data-translate-key="feature_3_text">Doplň energii po tréninku nebo si jen v klidu vychutnej kávu. Nabízíme široký sortiment nápojů a zdravých snacků pro regeneraci.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-card__icon"><i class='bx bxs-capsule'></i></div>
-                        <h3 class="feature-card__title">Výživové Doplňky Nutrend</h3>
-                        <p class="feature-card__text">Přijďte si k nám koupit protein, müsli tyčinky nebo "nakopávač" od ověřené značky Nutrend. Se vším vám rádi poradíme.</p>
+                        <h3 class="feature-card__title" data-translate-key="feature_4_title">Výživové Doplňky Nutrend</h3>
+                        <p class="feature-card__text" data-translate-key="feature_4_text">Přijďte si k nám koupit protein, müsli tyčinky nebo "nakopávač" od ověřené značky Nutrend. Se vším vám rádi poradíme.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-card__icon"><i class='bx bx-body'></i></div>
-                        <h3 class="feature-card__title">Diagnostika a Měření</h3>
-                        <p class="feature-card__text">Provádíme vážení a měření tuků. Společně sledujeme tvůj pokrok a přizpůsobujeme trénink pro dosažení nejlepších cílů.</p>
+                        <h3 class="feature-card__title" data-translate-key="feature_5_title">Diagnostika a Měření</h3>
+                        <p class="feature-card__text" data-translate-key="feature_5_text">Provádíme vážení a měření tuků. Společně sledujeme tvůj pokrok a přizpůsobujeme trénink pro dosažení nejlepších cílů.</p>
                     </div>
                      <div class="feature-card">
                         <div class="feature-card__icon"><i class='bx bx-band-aid'></i></div>
-                        <h3 class="feature-card__title">Kinesio Taping</h3>
-                        <p class="feature-card__text">Lepení elastických pásek pro relaxaci namožených svalů, redukci bolesti, otoků a modřin.</p>
+                        <h3 class="feature-card__title" data-translate-key="feature_6_title">Kinesio Taping</h3>
+                        <p class="feature-card__text" data-translate-key="feature_6_text">Lepení elastických pásek pro relaxaci namožených svalů, redukci bolesti, otoků a modřin.</p>
                     </div>
                 </div>
             </div>
@@ -85,8 +97,8 @@
                         <img src="img/wow.jpg" alt="Kim Collins v Trinity Clubu">
                     </div>
                     <div class="wow-card__content">
-                        <h2 class="wow-card__title">Místo, kde trénují mistři</h2>
-                        <p class="wow-card__text">Jsme hrdí na to, že naše fitness centrum si pro svou přípravu vybrala i taková hvězda světové atletiky, jako je mistr světa v běhu na 100m Kim Collins. To je pro nás důkazem kvality, kterou nabízíme.</p>
+                        <h2 class="wow-card__title" data-translate-key="wow_title">Místo, kde trénují mistři</h2>
+                        <p class="wow-card__text" data-translate-key="wow_text">Jsme hrdí na to, že naše fitness centrum si pro svou přípravu vybrala i taková hvězda světové atletiky, jako je mistr světa v běhu na 100m Kim Collins. To je pro nás důkazem kvality, kterou nabízíme.</p>
                     </div>
                 </div>
             </div>
@@ -94,8 +106,8 @@
         
         <section class="map-section">
             <div class="container">
-                <h2 class="section-title">Najdi si nás přímo v sále</h2>
-                <p class="section-subtitle">Prohlédni si naše prostory na mapě a naplánuj si cestu k nám. Jsme přímo v srdci Chebu.</p>
+                <h2 class="section-title" data-translate-key="map_title">Najdi si nás přímo v sále</h2>
+                <p class="section-subtitle" data-translate-key="map_subtitle">Prohlédni si naše prostory na mapě a naplánuj si cestu k nám. Jsme přímo v srdci Chebu.</p>
                 <div class="map-container">
                     <iframe src="https://www.google.com/maps/embed?pb=!4v1756575062258!6m8!1m7!1sCAoSLEFGMVFpcE5ZeUJidllKbkE3VURkSi04Q0pIOTJONFJpMGZXMDBCX3ZFNFpu!2m2!1d50.07505827212344!2d12.37460720542435!3f36.390015937330524!4f-23.275971681187002!5f0.7820865974627469" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
@@ -108,7 +120,7 @@
         <div class="footer__grid">
             <div class="footer__col">
                 <a href="index.html" class="navbar__logo"><img src="img/logo.png" alt="Trinity Club Logo"></a>
-                <p class="footer__col-text">Moderní fitness centrum v srdci Chebu, které vede Jiří Černý. Staňte se součástí naší komunity.</p>
+                <p class="footer__col-text" data-translate-key="footer_desc">Moderní fitness centrum v srdci Chebu, které vede Jiří Černý. Staňte se součástí naší komunity.</p>
                 <div class="footer__socials">
                     <a href="https://www.facebook.com/SKTrinityCheb" target="_blank" title="Facebook"><i class='bx bxl-facebook-square'></i></a>
                     <a href="https://www.instagram.com/sktrinity/" target="_blank" title="Instagram"><i class='bx bxl-instagram-alt'></i></a>
@@ -116,18 +128,18 @@
             </div>
 
             <div class="footer__col">
-                <h4 class="footer__col-title">Naše další projekty</h4>
+                <h4 class="footer__col-title" data-translate-key="footer_projects_title">Naše další projekty</h4>
                 <ul class="footer__list">
                     <li>
                         <strong><a href="http://www.sktrinity.cz/" target="_blank">SK TRINITY</a></strong>
-                        <ul class="footer__sublist">
+                        <ul class="footer__sublist" data-translate-key="footer_sk_trinity_desc">
                             <li>Děti 6-14 let</li>
                             <li>Plavání, Sportovka, Dance</li>
                         </ul>
                     </li>
                     <li>
                         <strong><a href="http://www.lccheb.cz/" target="_blank">LANOVÉ CENTRUM</a></strong>
-                        <ul class="footer__sublist">
+                        <ul class="footer__sublist" data-translate-key="footer_rope_center_desc">
                             <li>Lanové centrum na levém břehu Ohře</li>
                         </ul>
                     </li>
@@ -135,7 +147,7 @@
             </div>
 
             <div class="footer__col">
-                <h4 class="footer__col-title">Partneři</h4>
+                <h4 class="footer__col-title" data-translate-key="footer_partners_title">Partneři</h4>
                 <ul class="footer__list footer__list--partners">
                     <li>Iveta Top Salon</li>
                     <li>Tiskárna Skyepress Cheb</li>
@@ -145,13 +157,13 @@
             </div>
 
             <div class="footer__col">
-                <h4 class="footer__col-title">Kontakt</h4>
+                <h4 class="footer__col-title" data-translate-key="footer_contact_title">Kontakt</h4>
                 <ul class="footer__list">
                     <li><i class='bx bxs-map'></i><span>Evropská 1566/41, 350 02 Cheb</span></li>
                     <li><i class='bx bxs-phone-call'></i><a href="tel:+420777005222">777 005 222</a></li>
                     <li class="footer__hours">
                         <i class='bx bxs-time-five'></i>
-                        <span>
+                        <span data-translate-key="footer_hours">
                             Po-Pá: 8:00 - 20:00<br>
                             So-Ne: 9:00 - 12:00
                         </span>
@@ -160,8 +172,8 @@
             </div>
         </div>
         <div class="footer__bottom">
-            <p>© 2025 Trinity Club Cheb | Provozovatel: Jiří Černý, IČO: 75338631</p>
-            <p>Redesign by Max</p>
+            <p data-translate-key="footer_copyright">© 2025 Trinity Club Cheb | Provozovatel: Jiří Černý, IČO: 75338631</p>
+            <p data-translate-key="footer_redesign">Redesign by Max</p>
         </div>
     </div>
 </footer>
