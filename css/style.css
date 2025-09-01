@@ -579,3 +579,63 @@ main {
         display: none;
     }
 }
+/* --- Стили для мобильного переключателя языков --- */
+.language-switcher-mobile {
+    display: none; /* Скрываем по умолчанию */
+}
+
+@media (max-width: 991px) {
+    /* Скрываем десктопный переключатель на мобильных */
+    .language-switcher {
+        display: none;
+    }
+
+    /* Показываем и стилизуем мобильный переключатель */
+    .language-switcher-mobile {
+        display: block;
+        padding: 20px 24px;
+        margin-top: 10px;
+        border-top: 1px solid #333;
+    }
+
+    .language-switcher-mobile__title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #888;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .language-switcher-mobile__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .language-switcher-mobile__grid a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px;
+        border: 1px solid #444;
+        border-radius: 6px;
+        text-decoration: none;
+        color: var(--header-text-color);
+        transition: background-color 0.3s ease;
+    }
+
+    .language-switcher-mobile__grid a:hover {
+        background-color: #333;
+    }
+
+    .language-switcher-mobile__grid img {
+        width: 24px;
+        height: auto;
+        border-radius: 3px;
+    }
+    
+    .language-switcher-mobile__grid span {
+        font-weight: 700;
+    }
+}

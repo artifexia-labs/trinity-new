@@ -4,13 +4,13 @@
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh; /* Полная высота видимой области */
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--white-color);
     text-align: center;
-    overflow: hidden; /* Скрываем все, что выходит за пределы */
+    overflow: hidden;
 }
 
 /* Swiper Slider для фона */
@@ -20,21 +20,19 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Слайдер под контентом */
+    z-index: 1;
 }
 .hero-slider .swiper-slide {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* Эффект зума для каждой картинки */
     transform: scale(1.1); 
-    transition: transform 7s ease-out; /* Плавный зум */
+    transition: transform 7s ease-out;
 }
 .hero-slider .swiper-slide-active {
-    transform: scale(1); /* Возвращаем к нормальному размеру при активации */
+    transform: scale(1);
 }
 
-/* Оверлей для затемнения и читаемости текста */
 .hero__overlay {
     position: absolute;
     top: 0;
@@ -42,13 +40,12 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%);
-    z-index: 2; /* Оверлей между слайдером и текстом */
+    z-index: 2;
 }
 
-/* Контент Hero-секции */
 .hero__content {
     position: relative;
-    z-index: 3; /* Контент поверх всего */
+    z-index: 3;
     max-width: 800px;
     padding: 20px;
 }
@@ -71,46 +68,7 @@
     justify-content: center;
     flex-wrap: wrap;
 }
-.hero__button {
-    display: inline-block;
-    padding: 16px 32px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 18px;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-.hero__button--primary {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    border-color: var(--primary-color);
-}
-.hero__button--primary:hover {
-    background-color: var(--primary-color-dark);
-    border-color: var(--primary-color-dark);
-    transform: translateY(-3px);
-}
-.hero__button--secondary {
-    background-color: transparent;
-    color: var(--white-color);
-    border-color: var(--white-color);
-}
-.hero__button--secondary:hover {
-    background-color: var(--white-color);
-    color: var(--dark-color);
-    transform: translateY(-3px);
-}
 
-/* Адаптивность Hero Section */
-@media (max-width: 768px) {
-    .hero__title {
-        font-size: 36px;
-    }
-    .hero__subtitle {
-        font-size: 18px;
-    }
-}
 /* --- Секция "Для кого наш клуб?" --- */
 .who-for {
     padding: 80px 0;
@@ -141,7 +99,7 @@
     color: #6c757d;
 }
 
-/* --- Улучшения для секции преимуществ --- */
+/* --- Секция преимуществ --- */
 .benefits__item-link {
     text-decoration: none;
     color: inherit;
@@ -161,7 +119,7 @@
     flex-grow: 1;
 }
 
-/* --- Улучшения для секции новостей --- */
+/* --- Секция новостей --- */
 .news__cta {
     text-align: center;
     margin-top: 40px;
@@ -221,7 +179,7 @@
     font-size: 16px;
     color: #6c757d;
     margin-bottom: 25px;
-    min-height: 70px; /* Чтобы карточки были одной высоты */
+    min-height: 70px;
 }
 .cta-card__price {
     font-size: 32px;
@@ -231,26 +189,12 @@
 .cta-card .hero__button {
     width: 100%;
 }
-@media (max-width: 768px) {
-    .cta-grid {
-        grid-template-columns: 1fr;
-    }
-    .cta-card--primary {
-        transform: scale(1);
-    }
-     .cta-card--primary:hover {
-        transform: translateY(-5px);
-    }
-    .cta-card__description {
-        min-height: unset;
-    }
-}
+
 /* --- Стили для Актуальных Новостей --- */
 .actual-news {
     padding: 80px 0;
     background-color: var(--white-color);
 }
-
 .news-item {
     display: flex;
     flex-direction: row;
@@ -262,56 +206,47 @@
     margin-bottom: 40px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
-
 .news-item--highlight {
-    background-color: #e6f7ff; /* Более светлый цвет для важной новости */
+    background-color: #e6f7ff;
     border: 2px solid var(--primary-color);
 }
-
 .news-item__content {
-    flex: 2; /* Контент занимает больше места */
+    flex: 2;
 }
-
 .news-item__media {
-    flex: 1; /* Медиа занимает меньше места */
+    flex: 1;
     min-width: 250px;
     text-align: center;
 }
-
 .news-item__media video,
 .news-item__media img {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    display: block; /* Убираем лишний отступ под изображением/видео */
+    display: block;
 }
-
 .news-item__video-caption {
     margin-top: 10px;
     font-size: 14px;
     color: #6c757d;
 }
-
 .news-item__title {
     font-size: 24px;
     font-weight: 700;
     color: var(--header-bg-color);
     margin-bottom: 10px;
 }
-
 .news-item__date {
     font-size: 14px;
     color: var(--primary-color);
     margin-bottom: 15px;
 }
-
 .news-item__text {
     font-size: 16px;
     line-height: 1.7;
     color: #495057;
     margin-bottom: 20px;
 }
-
 .news-item__link {
     display: inline-block;
     color: var(--primary-color);
@@ -319,20 +254,54 @@
     font-weight: 600;
     transition: color 0.3s ease;
 }
-
 .news-item__link:hover {
     color: var(--header-bg-color);
     text-decoration: underline;
 }
-
 .news__all-link {
     text-align: center;
     margin-top: 50px;
 }
+.news-item__media video {
+    min-width: 250px;
+    min-height: 200px;
+    background-color: #000;
+}
 
-
-/* Адаптация для мобильных устройств */
+/* --- Адаптивность для мобильных --- */
 @media (max-width: 768px) {
+    .hero {
+        height: 80vh; /* Уменьшаем высоту на мобильных */
+    }
+    .hero__title {
+        font-size: 32px;
+    }
+    .hero__subtitle {
+        font-size: 16px;
+    }
+    .hero__buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    .hero__button {
+        width: 100%;
+        max-width: 300px;
+        font-size: 16px;
+        padding: 14px 28px;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+    .section-subtitle {
+        font-size: 16px;
+    }
+    .who-for, .benefits, .actual-news, .virtual-tour, .final-cta {
+        padding: 60px 0;
+    }
+    .benefits__grid {
+        grid-template-columns: 1fr;
+    }
     .news-item {
         flex-direction: column;
         align-items: stretch;
@@ -347,11 +316,19 @@
     .news-item__title {
         font-size: 20px;
     }
-}
-/* --- Исправление для видео, чтобы избежать скачков колонки --- */
-.news-item__media video {
-    /* Добавляем минимальные размеры для видео, чтобы оно не "хлопало" при загрузке */
-    min-width: 250px; /* Минимальная ширина, как у родителя */
-    min-height: 200px; /* Примерная минимальная высота, подбери подходящую */
-    background-color: #000; /* Черный фон до загрузки видео */
+    .virtual-tour__container iframe {
+        height: 400px;
+    }
+    .cta-grid {
+        grid-template-columns: 1fr;
+    }
+    .cta-card--primary {
+        transform: scale(1);
+    }
+     .cta-card--primary:hover {
+        transform: translateY(-5px);
+    }
+    .cta-card__description {
+        min-height: unset;
+    }
 }

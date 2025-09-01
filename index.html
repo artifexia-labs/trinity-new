@@ -20,7 +20,7 @@
     <header class="header">
         <nav class="navbar">
             <a href="index.html" class="navbar__logo"><img src="img/logo.png" alt="Trinity Club Logo"></a>
-            <ul class="navbar__menu">
+            <ul class="navbar__menu" id="nav-menu">
                 <li><a href="cviceni.html" data-translate-key="nav_cviceni">Cvičení</a></li>
                 <li><a href="cenik.html" data-translate-key="nav_cenik">Ceník</a></li>
                 <li><a href="sluzby.html" data-translate-key="nav_sluzby">Služby</a></li>
@@ -28,19 +28,30 @@
                 <li><a href="aktuality.html" data-translate-key="nav_aktuality">Aktuality</a></li>
                 <li><a href="o-nas.html" data-translate-key="nav_onas">O nás</a></li>
                 <li><a href="kontakty.html" data-translate-key="nav_kontakty">Kontakty</a></li>
+                <li class="language-switcher-mobile">
+                    <div class="language-switcher-mobile__title" data-translate-key="mobile_lang_title">Změnit jazyk</div>
+                    <div class="language-switcher-mobile__grid">
+                        <a href="#" class="lang-btn" data-lang="cs"><img src="https://flagcdn.com/w40/cz.png" alt="cs"><span>CS</span></a>
+                        <a href="#" class="lang-btn" data-lang="ru"><img src="https://flagcdn.com/w40/ru.png" alt="ru"><span>RU</span></a>
+                        <a href="#" class="lang-btn" data-lang="en"><img src="https://flagcdn.com/w40/gb.png" alt="en"><span>EN</span></a>
+                        <a href="#" class="lang-btn" data-lang="de"><img src="https://flagcdn.com/w40/de.png" alt="de"><span>DE</span></a>
+                    </div>
+                </li>
             </ul>
-             <div class="language-switcher">
-    <button class="language-switcher__button" id="lang-switcher-button">
-        <img src="https://flagcdn.com/w40/cz.png" alt="cs" id="current-lang-flag">
-        <span class="language-switcher__code" id="current-lang-code">CS</span>
-    </button>
-    <ul class="language-switcher__dropdown" id="lang-switcher-dropdown">
-        <li><a href="#" class="lang-btn" data-lang="cs"><img src="https://flagcdn.com/w40/cz.png" alt="cs"> <span>Čeština</span></a></li>
-        <li><a href="#" class="lang-btn" data-lang="ru"><img src="https://flagcdn.com/w40/ru.png" alt="ru"> <span>Русский</span></a></li>
-        <li><a href="#" class="lang-btn" data-lang="en"><img src="https://flagcdn.com/w40/gb.png" alt="en"> <span>English</span></a></li>
-        <li><a href="#" class="lang-btn" data-lang="de"><img src="https://flagcdn.com/w40/de.png" alt="de"> <span>Deutsch</span></a></li>
-    </ul>
-</div>
+
+            <div class="language-switcher">
+                <button class="language-switcher__button" id="lang-switcher-button">
+                    <img src="https://flagcdn.com/w40/cz.png" alt="cs" id="current-lang-flag">
+                    <span class="language-switcher__code" id="current-lang-code">CS</span>
+                </button>
+                <ul class="language-switcher__dropdown" id="lang-switcher-dropdown">
+                    <li><a href="#" class="lang-btn" data-lang="cs"><img src="https://flagcdn.com/w40/cz.png" alt="cs"> <span>Čeština</span></a></li>
+                    <li><a href="#" class="lang-btn" data-lang="ru"><img src="https://flagcdn.com/w40/ru.png" alt="ru"> <span>Русский</span></a></li>
+                    <li><a href="#" class="lang-btn" data-lang="en"><img src="https://flagcdn.com/w40/gb.png" alt="en"> <span>English</span></a></li>
+                    <li><a href="#" class="lang-btn" data-lang="de"><img src="https://flagcdn.com/w40/de.png" alt="de"> <span>Deutsch</span></a></li>
+                </ul>
+            </div>
+
             <a href="http://rezervace.trinityclub.cz/" target="_blank" class="navbar__cta-button" data-translate-key="nav_rozvrh">ROZVRH</a>
             <button class="navbar__menu-toggle" id="menu-toggle"><i class='bx bx-menu'></i></button>
         </nav>
